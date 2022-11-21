@@ -21,6 +21,7 @@ html{
     top: 0;
     left: 0px;
     right: 0px;
+    z-index: 1;
 }
 
 #navBar li{
@@ -94,7 +95,6 @@ html{
 height: 555px;
 background: #FDF5AA;
 margin-top:78px;
-/* display:inline-block;  */
 }
 #hotFood .listFood{
     width: 40%;
@@ -109,15 +109,210 @@ margin-top:78px;
 }
 #hotFood .imgFood{
     position: absolute;
-    width: 60%;
     display:inline-block;
     left: 712px;
     top: 150px;
 }
-#suggestFood{}
+#suggestFood{
+    position: relative;
+}
+#suggestFood .title,#discount .title,#Rate .title{
+    /* position: absolute; */
+    text-align: center;
+    font-weight: 700;
+    margin-top: 29px;
+}
+#suggestFood .scrollFood{
+    margin-top: 38px;
+    list-style-type: none;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0px 200px 0px 126px;
+}
+#suggestFood .scrollFood::-webkit-scrollbar {
+    display: none;
+}
 
-#discount{}
+#suggestFood .scrollFood li{
+    position:relative;
+    width: 300px;
+    display:inline-block;
+    margin-right: 50px;
+    text-decoration: none;
+    white-space: normal;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#suggestFood .scrollFood .food1{
+    width: 300px;
+    height: 241px;
+    object-fit:contain;
+}
+#suggestFood .scrollFood > li .foodName{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 400;
+}
+#suggestFood .scrollFood > li .foodDes{
+    margin-top: 5px;
+    font-size: 15px;
+    opacity: 0.6;
+}
+#suggestFood .scrollFood > li .price1{
+    margin-top: 30px;
+    text-decoration: line-through;
+    font-size: 25px;  
+    font-display:calc();  
+    opacity: 0.4;
+}
+#suggestFood .scrollFood > li .price2{
+    font-size: 25px;  
+    font-weight: bold;  
+}
+#suggestFood .scrollFood > li .button{
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    height:52px;
+    width: 60%;
+    background-color: #F2C94C;
+    text-align: center;
+    line-height: 52px;
+    cursor: pointer;
 
-#Rate{}
-
+}
+#suggestFood .scrollFood > li .ti-shopping-cart{
+    padding-left: 10px;
+}
+#suggestFood .watchMore{
+    position: absolute;
+    padding: 14px 32px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:29px;
+}
+#discount{
+    margin-top: 109px;
+    position: relative;
+}
+#discount .note{
+    margin-left: 126px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+#Rate{
+    position: relative;
+}
+#Rate .sumRate{
+    position: relative;
+    margin-top: 30px;
+    width: 263px;
+    height: 161px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-left:20%;
+}
+#Rate .logo{
+    /* position: absolute;   */
+    width: 70%;
+    margin-top: 214px;
+    margin-left: 40%;
+    top: 265px;
+    border-radius: 296px;
+}
+#Rate .RateLogo{
+    width: 40%;
+    float:left;
+}
+#Rate .RateList{
+    width: 60%;
+    float:right;
+}
+#Rate .Rate1, #Rate .Rate2{
+    position: relative;
+    margin-top: 44px;
+    width: 505px;
+    height: 286px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-left:20%;
+}
+#Rate .RateInfo{
+    overflow: hidden;
+}
+#Rate .danhgia{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    left: 36px;
+    top: 33px;  
+}
+#Rate .avatar1{
+    position: absolute;
+    left:29px;
+    top:72px;
+}
+#Rate .avatar2{
+    position: absolute;
+    left:72px;
+    top:72px;
+}
+#Rate .avatar3{
+    position: absolute  ;
+    left:114px;
+    top:72px;
+}
+#Rate .des1{
+    position: absolute;
+    margin: 10px 10px 20px 10px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+#Rate .cus_avatar{
+    position: absolute;
+    margin-left: 10px;
+    margin-top:130px;
+}
+#Rate .cus_name{
+    position: absolute;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 85px;
+    margin-top:130px;
+}
+#Rate .cus{
+    position: absolute;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 30px;
+    margin-left: 85px;
+    margin-top: 150px;
+    opacity:0.6;
+}
+#Rate .rating{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 225px;
+}
+#Rate .checked{
+    color: rgb(255, 201, 7)
+}
+#Rate .fa-star{
+    padding: 0px 20px
+}
+#Rate .RateNum{
+    font-weight: bold;
+    padding-left: 25px;
+    padding-top:10px;
+}
 #Footer{}
