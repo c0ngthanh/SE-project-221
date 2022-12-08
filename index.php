@@ -1,8 +1,10 @@
 <?php
-require_once './Controllers/BaseController.php';
+require './Core/Database.php';
+require './Controllers/BaseController.php';
+require './Models/BaseModel.php';
+
 $controllerName = ucfirst(strtolower($_REQUEST['controller'] ?? 'index') . 'Controller');
 $actionName = strtolower($_REQUEST['action'] ?? 'index');
-
 require "./Controllers/${controllerName}.php";
 $controllerObject = new $controllerName;
 $controllerObject->$actionName();
@@ -16,5 +18,6 @@ $controllerObject->$actionName();
     <title>Document</title>
 </head>
 <body>
+    
 </body>
 </html>

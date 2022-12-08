@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Products</h1>
+    <?php
+        echo '<pre>';
+        print_r($products);
+        echo '</pre>';
+    ?>
+       
 </body>
 </html>
