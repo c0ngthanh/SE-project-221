@@ -1,11 +1,11 @@
 <?php
+require_once './Controllers/BaseController.php';
 $controllerName = ucfirst(strtolower($_REQUEST['controller'] ?? 'index') . 'Controller');
 $actionName = strtolower($_REQUEST['action'] ?? 'index');
 
 require "./Controllers/${controllerName}.php";
-echo $controllerName.'<br>';
- $controllerObject = new $controllerName;
- var_dump($controllerObject);
+$controllerObject = new $controllerName;
+$controllerObject->$actionName();
 ?>
 <!DOCTYPE html>
 <html lang="en">
