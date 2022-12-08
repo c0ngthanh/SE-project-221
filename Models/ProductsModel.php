@@ -1,8 +1,8 @@
 <?php
     class ProductsModel extends BaseModel{
         const TABLE = 'products';
-        public function getAll($table){
-           return $this->All($table);
+        public function getAll(){
+           return $this->All(self::TABLE);
         }
         
         public function findById($id){

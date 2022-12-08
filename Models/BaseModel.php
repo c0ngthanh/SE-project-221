@@ -9,9 +9,12 @@
         public function All($table){
             $sql = "SELECT * from ${table}";
             $query = $this->_query($sql);
+            $data = [];
             while($row=mysqli_fetch_assoc($query)){
-                var_dump($row);
+                array_push($data,$row);
             }
+            
+            return $data;
         }
 
         /* Lay ra 1 bang ghi trong bang */

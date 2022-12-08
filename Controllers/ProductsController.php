@@ -8,7 +8,7 @@ class ProductsController extends BaseController {
     }
     public function index(){
         // $pageTitle = 'testing';
-        $products = $this->ProductsModel->getAll(ProductsModel::TABLE);
+        $products = $this->ProductsModel->getAll();
         return $this->view('frontend.products.index',[
             'products' => $products,
         ]);
