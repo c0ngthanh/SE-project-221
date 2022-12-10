@@ -1,12 +1,12 @@
 <?php
     class ProductsModel extends BaseModel{
         const TABLE = 'products';
-        public function getAll(){
-           return $this->All(self::TABLE);
+        public function getAll($select = ['*'],$orderBys =[],$limit =15){
+           return $this->All(self::TABLE,$select,$orderBys,$limit);
         }
         
         public function findById($id){
-            return __METHOD__;
+            return $this->find(self::TABLE,$id);
         }
 
         public function delete($id){
