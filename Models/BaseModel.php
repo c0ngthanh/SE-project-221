@@ -26,9 +26,9 @@
         }
 
         /* Lay ra 1 bang ghi trong bang */
-        public function find($table,$id){
-            $sql = "select * from ${table} where ${table}.product_id = ${id}";
-            $query = $this->_query($sql);            
+        public function find($table,$id,$column_id){
+            $sql = "select * from ${table} where ${table}.${column_id} = ${id}";
+            $query = $this->_query($sql);
             return mysqli_fetch_assoc($query);
         }
 

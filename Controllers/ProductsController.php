@@ -20,12 +20,11 @@ class ProductsController extends BaseController {
     }
     
     public function show(){
-        $id = $_GET['id'] ?? null;
-        $product = $this->ProductsModel->findById($id);
-        // echo '<pre>';
-        // print_r($product);
-        // echo '</pre>';
-    }
-
+        $products_id = $_GET['id'] ?? 'null';
+        $product_id = $this->ProductsModel->findById($products_id);
+        return $this->view('frontend.products.show',[
+            'product_id' => $product_id, //
+        ]);
+}
 }
 ?>
