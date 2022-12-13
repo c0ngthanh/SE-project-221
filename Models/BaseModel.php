@@ -27,19 +27,32 @@
 
         /* Lay ra 1 bang ghi trong bang */
         public function find($table,$id,$column_id){
-            $sql = "select * from ${table} where ${table}.${column_id} = ${id}";
+            $sql = "select * from ${table} where ${table}.${column_id} = ${id} limit 1";
             $query = $this->_query($sql);
             return mysqli_fetch_assoc($query);
         }
 
         /* Them moi mot du lieu vao bang */
-        public function store(){
+        public function create($table,$data = []){
+            $keys = implode(',',array_keys($data));
+            $values = array_map(function($value){
+                return "'".$value."'";
+            },array_values($data));
+            $values = implode(',',$values);
 
+            $sql = "insert into ${table}(${keys}) values(${values})";
+            $this->_query($sql);
         }
 
         /*Cap nhat du lieu vao bang*/
-        public function update($id){
-            return __METHOD__;
+        public function update($table,$id,$data,$addr_id){
+            $dataSets = [];
+            foreach($data as $key => $value){
+                array_push($dataSets,"${key} = '" .$value. "'");
+            }
+            $dataString = implode(',',$dataSets);
+            $sql = "update ${table} set ${dataString} where ${addr_id} = $id";
+            die($sql);
         }
 
         /*Xoa du lieu trong bang*/

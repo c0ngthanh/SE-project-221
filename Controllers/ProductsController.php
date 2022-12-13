@@ -25,6 +25,28 @@ class ProductsController extends BaseController {
         return $this->view('frontend.products.show',[
             'product_id' => $product_id, //
         ]);
-}
+    }
+    
+    public function store(){
+        $data =[
+            'name' => 'iphone 12',
+            'price' => '26000000',
+            'image' => null,
+            'category_id' => 2
+        ];
+        $this->ProductsModel->store($data);
+    }
+    public function update(){
+        if(isset($_GET['id'])){
+            $id =$_GET['id'];
+            $data =[
+            'name' => 'iphone 12',
+            'price' => '26000000',
+            'image' => null,
+            'category_id' => 2
+        ];
+        $this->ProductsModel->updateData($id,$data);
+        }
+    }
 }
 ?>

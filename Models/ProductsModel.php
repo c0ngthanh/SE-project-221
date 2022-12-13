@@ -9,6 +9,13 @@
             return $this->find(self::TABLE,$id,'product_id');
         }
 
+        public function store($data){
+            $this->create(self::TABLE,$data);
+        }
+
+        public function updateData($id,$data){
+            $this->update(self::TABLE,$id,$data,'product_id');
+        }
         public function delete($id){
             return __METHOD__;
         }
