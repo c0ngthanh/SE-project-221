@@ -12,14 +12,25 @@ html{
 
 .Hotfood {
     position: relative;
-    background: yellow;
     height: 387px;
     left: 0px;
     top: 82px;
 }
 
-.Hotfood #content {
-    position: relative;
+.Hotfood .box {
+    position: absolute;
+
+    top: 140px;
+    left: 40px;
+    right: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Hotfood .content {
+    position: absolute;
     width: 447px;
     height: 62px;
     left: 24px;
@@ -29,4 +40,83 @@ html{
     font-weight: 700;
     font-size: 96px;
     line-height: 120px;
+    margin-bottom: 50px;
+}
+
+.Hotfood .item {
+    position: relative;
+    box-sizing: border-box;
+    width: 336px;
+    height: 130px;
+    margin: 20px;
+
+    background: #FFFFFF;
+    border: 2px solid #838DE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.Hotfood .box .item .img-food {
+    padding: 10px;
+}
+
+.item .name-food {
+    position: absolute;
+    left: 174px;
+    top: 10px;
+}
+
+.item .rating{
+    position: absolute;
+    width: 162px;
+    height: 28px;
+    left: 174px;
+    top: 50px;
+}
+.item .checked{
+    color: rgb(255, 201, 7)
+}
+.item .fa-star{
+    padding: 0px 2px
+}
+.item .RateNum{
+    font-weight: bold;
+}
+
+.item .rating .in {
+    display: inline-block;
+}
+
+.item .dis-price-food {
+    text-decoration-line: line-through;
+    position: absolute;
+    left: 174px;
+    top: 70px;
+}
+
+.item .price-food {
+    position: absolute;
+    left: 174px;
+    top: 70px;
+}
+
+.item .new-dis-price-food {
+    color: red;
+    position: absolute;
+    left: 174px;
+    top: 93px;
+}
+
+.item .add-food {
+    box-sizing: border-box;
+    position: absolute;
+    left: 296px;
+    top: 85px;
+    background: #D9D9D9;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+h5 {
+    padding: 0px 7px 0px;
 }
