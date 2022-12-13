@@ -1,3 +1,4 @@
+## NHỚ COMMIT VÀ PUSH CODE CUỐI MỖI NGÀY.
 ## Git - Pull code
 
 Trước khi develop và sau khi develop và push lên, mọi người cần phải pull code về nha
