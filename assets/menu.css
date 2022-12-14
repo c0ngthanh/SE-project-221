@@ -57,6 +57,8 @@ html{
 }
 
 .Hotfood .box .item .img-food {
+    width: 170px;
+    height: 125px;
     padding: 10px;
 }
 

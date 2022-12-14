@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    color: #000;
+}
+
+#container-cart {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    width: 1000px;
+    height: auto;
+    top: 153px;
+    left: 150px;
+}
+
+#container-cart .food {
+    border: 1px solid #EFF0F6;
+    display: flex;
+    width: 1000px;
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#container-cart .food .foodimg {
+    margin: 10px;
+    width: 270px;
+    height: 180px;
+}
+
+#container-cart .food .infor-food {
+    margin: 10px;
+}
+
+#container-cart .food .quan {
+    margin: 20px 0px 10px;
+    display: inline-block;
+}
+
+#container-cart .food .note {
+    display: inline-block;
+}
+
+#container-cart .food .foodnote {
+    margin: 20px 0px 10px;
+
+}
+
+#container-cart .sty-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    align-items: center;
+}
+
+#container-cart .food .total-price {
+    margin-top: 160px;
+    margin-left: 200px;
+}
+
+#container-cart .food .foodnote .note-stype {
+
+}
+
+#container-cart .infor-cart .order {
+    font-size: 24px;
+    margin: 10px;
+    padding: 0px 10px 0px;
+    position: relative;
+    left: 850px;
+    bottom: 60px;
+
+    box-sizing: border-box;
+    border-radius: 6.24px;
+    border: none;
+}
+
+/* increment quanlity */
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+.number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+  }
+  
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+  }
+  
+.number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin: 0;
+  }
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 4rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 1rem;
+    height: rem;
+    font-weight: bold;
+    text-align: center;
+  }
