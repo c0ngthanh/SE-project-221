@@ -6,11 +6,10 @@
     </div>
     <li>
         <ul id="subNav">
-            <li><a href="index.html">Trang chủ</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="AboutUs.html">Về nhà hàng</a></li>
             <li><a href="History.html">Lịch sử mua hàng</a></li>
+            <li><a href="../Views/frontend/cart/index.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </li>
-    <a class="login" href="login.html">Đăng nhập</a>
 </div>
