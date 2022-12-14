@@ -16,6 +16,11 @@
         public function updateData($id,$data){
             $this->update(self::TABLE,$id,$data,'product_id');
         }
+
+        public function getProductByCategoryId($categoryId){
+            
+        }
+
         public function delete($id){
             return __METHOD__;
         }
