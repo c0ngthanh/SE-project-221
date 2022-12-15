@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#">Lịch sử mua hàng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Giỏ hàng</a>
+                    <a class="nav-link" href="#">Giỏ hàng</a>
                 </li>
             </ul>
         </div>

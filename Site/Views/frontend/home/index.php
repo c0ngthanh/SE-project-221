@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiang Res Home</title>
     <link rel="stylesheet" type="text/css" href="../../../../assets/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/footer.css">
     <link rel="stylesheet" type="text/css"
         href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet">
