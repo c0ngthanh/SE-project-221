@@ -12,6 +12,5 @@
         print_r($products);
         echo '</pre>';
     ?>
-       
 </body>
 </html>
