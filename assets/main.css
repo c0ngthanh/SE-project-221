@@ -13,87 +13,25 @@ html{
 #main{}
 
 
-#navBar{
-    width: 100%;
-    height: 78px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0px;
-    right: 0px;
-    z-index: 1;
-}
-
-#navBar li{
-    display:inline-block;
-    line-height: 78px;
-}
-#navBar .logoNav {
-    width: 44px;
-    height: 44px;
-    left: 186px;
-    top: 20px;
+.navbar .logoNav {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
     border-radius: 296px;
     position: relative;
 }
-#navBar .search-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 56px 12px 40px;
-    gap: 12px;
-    position: absolute;
-    width: 336px;
-    height: 44px;
-    left: 288px;
-    top: 20px;
-    background: #F9FAFA;
-    border: none
-}
-#navBar .search-box .location{
-    padding: 12px 56px 12px 0px;
-    background: #F9FAFA;
-    border: none
-}
-#navBar #subNav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    width: 700px;
-    height: 20px;
-    left: 728px;
-    top: 35px;
 
+.d-flex {
+    background: #F9FAFA;
 }
-#navBar #subNav li a{
-    padding: 0px 14px;
-    text-decoration: none;
-    color:#000;
-}
-#navBar .login{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 32px;
-    gap: 10px;
-    position: absolute;
-    width: 149px;
-    height: 47px;
-    left: 1250px;
-    top: 19px;
-    background: #FDF5AA;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    text-decoration: none;
-    color:#000;
 
+.collapse {
+    margin-left: 40%;
 }
+
 #hotFood{
 height: 555px;
 background: #FDF5AA;
-margin-top:78px;
 }
 #hotFood .listFood{
     width: 40%;
@@ -110,89 +48,83 @@ margin-top:78px;
     width: 50%;
     margin: 72px 0px 0px 20px;  
 }
-#suggestFood{
-    position: relative;
-}
-#suggestFood .title,#discount .title,#Rate .title{
+.container-fluid .title,#discount .title,#Rate .title{
     /* position: absolute; */
     text-align: center;
     font-weight: 700;
     margin-top: 29px;
 }
-#suggestFood .scrollFood{
-    margin-top: 38px;
-    list-style-type: none;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 0px 200px 0px 126px;
-}
-#suggestFood .scrollFood::-webkit-scrollbar {
-    display: none;
+
+.carousel {
+    margin: 0px 30px 0px;
 }
 
-#suggestFood .scrollFood li{
-    position:relative;
-    width: 300px;
-    display:inline-block;
-    margin-right: 50px;
-    text-decoration: none;
-    white-space: normal;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
 }
-#suggestFood .scrollFood .food1{
-    width: 300px;
-    height: 241px;
-    object-fit:contain;
+.col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
 }
-#suggestFood .scrollFood > li .foodName{
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 400;
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
 }
-#suggestFood .scrollFood > li .foodDes{
+
+.col-item:hover .info {
+    background-color: #F5F5DC;
+}
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
     margin-top: 5px;
-    font-size: 15px;
-    opacity: 0.6;
 }
-#suggestFood .scrollFood > li .price1{
-    margin-top: 30px;
-    text-decoration: line-through;
-    font-size: 25px;  
-    font-display:calc();  
-    opacity: 0.4;
-}
-#suggestFood .scrollFood > li .price2{
-    font-size: 25px;  
-    font-weight: bold;  
-}
-#suggestFood .scrollFood > li .button{
-    margin-top: 10px;
-    margin-left:auto;
-    margin-right: auto;
-    height:52px;
-    width: 60%;
-    background-color: #F2C94C;
-    text-align: center;
-    line-height: 52px;
-    cursor: pointer;
 
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
 }
-#suggestFood .scrollFood > li .ti-shopping-cart{
-    padding-left: 10px;
+
+.price-text-color
+{
+    color: #219FD1;
 }
-/* #suggestFood .watchMore{
-    position: absolute;
-    padding: 14px 32px;
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
     text-align: center;
-    color: #000;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top:29px;
-} */
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    margin-left: 25%;
+}
+
+
 #discount{
     margin-top: 23px;
     position: relative;
@@ -305,8 +237,12 @@ margin-top:78px;
     color: rgb(255, 201, 7)
 }
 #Rate .fa-star{
-    padding: 0px 20px
+    padding: 0px 10px
 }
+#Rate .star {
+    display: inline-block;
+}
+
 #Rate .RateNum{
     font-weight: bold;
     padding-left: 25px;
