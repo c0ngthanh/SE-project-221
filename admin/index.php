@@ -29,6 +29,7 @@ $offset = ($page - 1) * $record1page;
                                             } ?>>Tên</option>
             </select>
             <input type="text" class="form-control mb-2 mr-sm-2" name="search">
+            <input type="hidden" name="type" value="employee">
             <button type="submit" class="btn btn-primary mb-2" name="page" value="<?= $page ?>">Sort</button>
         </form>
     </div>
