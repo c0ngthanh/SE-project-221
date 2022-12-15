@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiang Res Home</title>
-    <link rel="stylesheet" type="text/css" href="../../../../assets/main.css">
-    <link rel="stylesheet" type="text/css"
-        href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
@@ -42,25 +40,20 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../assets/image/hotfood1.webp" class="d-block w-100" alt="..." width="700"
-                                height="400">
+                            <img src="../assets/image/hotfood1.webp" class="d-block w-100" alt="..." width="700" height="400">
                         </div>
                         <div class="carousel-item">
-                            <img src="../assets/image/Sfood1.jpg" class="d-block w-100" alt="..." width="700"
-                                height="400">
+                            <img src="../assets/image/Sfood1.jpg" class="d-block w-100" alt="..." width="700" height="400">
                         </div>
                         <div class="carousel-item">
-                            <img src="../assets/image/hotfood1.webp" class="d-block w-100" alt="..." width="700"
-                                height="400">
+                            <img src="../assets/image/hotfood1.webp" class="d-block w-100" alt="..." width="700" height="400">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -80,8 +73,7 @@
                             <div class="col-sm-3">
                                 <div class="col-item">
                                     <div class="photo">
-                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive"
-                                            alt="a" />
+                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive" alt="a" />
                                     </div>
                                     <div class="info">
                                         <div class="row">
@@ -94,8 +86,7 @@
                                         </div>
                                         <div class="separator clear-left">
                                             <p class="btn-add">
-                                                <i class="fa fa-shopping-cart"></i><a
-                                                    href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
+                                                <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
                                                     cart</a>
                                             </p>
                                         </div>
@@ -107,8 +98,7 @@
                             <div class="col-sm-3">
                                 <div class="col-item">
                                     <div class="photo">
-                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive"
-                                            alt="a" />
+                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive" alt="a" />
                                     </div>
                                     <div class="info">
                                         <div class="row">
@@ -121,8 +111,7 @@
                                         </div>
                                         <div class="separator clear-left">
                                             <p class="btn-add">
-                                                <i class="fa fa-shopping-cart"></i><a
-                                                    href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
+                                                <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
                                                     cart</a>
                                             </p>
                                         </div>
@@ -134,8 +123,7 @@
                             <div class="col-sm-3">
                                 <div class="col-item">
                                     <div class="photo">
-                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive"
-                                            alt="a" />
+                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive" alt="a" />
                                     </div>
                                     <div class="info">
                                         <div class="row">
@@ -147,8 +135,7 @@
                                         </div>
                                         <div class="separator clear-left">
                                             <p class="btn-add">
-                                                <i class="fa fa-shopping-cart"></i><a
-                                                    href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
+                                                <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
                                                     cart</a>
                                             </p>
                                         </div>
@@ -160,8 +147,7 @@
                             <div class="col-sm-3">
                                 <div class="col-item">
                                     <div class="photo">
-                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive"
-                                            alt="a" />
+                                        <img src="../../../../assets/image/Banh-gao-cay.png" class="img-responsive" alt="a" />
                                     </div>
                                     <div class="info">
                                         <div class="row">
@@ -174,8 +160,7 @@
                                         </div>
                                         <div class="separator clear-left">
                                             <p class="btn-add">
-                                                <i class="fa fa-shopping-cart"></i><a
-                                                    href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
+                                                <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to
                                                     cart</a>
                                             </p>
                                         </div>
