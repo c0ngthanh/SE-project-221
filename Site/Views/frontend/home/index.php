@@ -31,10 +31,8 @@
         <!--Begin hotFood-->
         <div id="hotFood">
             <div class="listFood">
-                <h2 style="font-size :96px;">Món Hot
-                    <i class="ti-star"></i>
-                </h2>
-                <ul style="font-size :34px" class="listHotFood">
+                <h2 style="font-size :60px;">Món Hot<i class="ti-star"></i></h2>
+                <ul style="font-size :30px" class="listHotFood">
                     <li>Đùi gà sốt me</li>
                     <li>Rau trộn</li>
                     <li>Bánh mâm xôi</li>
