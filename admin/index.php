@@ -34,7 +34,6 @@ $offset = ($page - 1) * $record1page;
 </head>
 
 <body>
-
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -42,7 +41,6 @@ $offset = ($page - 1) * $record1page;
                 <h3>DashBoard</h3>
                 <strong>DB</strong>
             </div>
-
             <ul class="list-unstyled components">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -102,7 +100,6 @@ $offset = ($page - 1) * $record1page;
                 </li>
             </ul>
         </nav>
-
         <!-- Page Content  -->
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -139,15 +136,15 @@ $offset = ($page - 1) * $record1page;
                     <!-- Nav pills -->
                     <form class="form-inline" action="" method="GET">
                         <select type="sort" class="form-control mb-2 mr-sm-2" id="sort" name="sort">
-                            <option value="emp_id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "id") {
-                                                    echo "selected";
-                                                } ?>>IDNHIEMVU</option>
-                            <option value="time" <?php if (isset($_GET['sort']) && $_GET['sort'] == "time") {
+                            <option value="emp_id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_id") {
                                                         echo "selected";
-                                                    } ?>>TIME</option>
-                            <option value="emp_username" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_username") {
-                                                                echo "selected";
-                                                            } ?>>NHANVIEN</option>
+                                                    } ?>>ID</option>
+                            <option value="emp_fname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_fname") {
+                                                            echo "selected";
+                                                        } ?>>Họ</option>
+                            <option value="emp_lname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_lname") {
+                                                            echo "selected";
+                                                        } ?>>Tên</option>
                         </select>
                         <input type="text" class="form-control mb-2 mr-sm-2" name="search">
                         <button type="submit" class="btn btn-primary mb-2" name="page" value="<?= $page ?>">Sort</button>
@@ -166,9 +163,9 @@ $offset = ($page - 1) * $record1page;
                         <th>Họ</th>
                         <th>Tên</th>
                         <th>Số điện thoại</th>
-                        <th>mail</th>
-                        <th>username</th>
-                        <th>password</th>
+                        <th>Email</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Mật khẩu</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
@@ -192,16 +189,15 @@ $offset = ($page - 1) * $record1page;
                     ?>
                         <tr>
                             <td><?php echo $r['emp_id']; ?></td>
-                            <td><?php echo $r['emp_lname']; ?></td>
                             <td><?php echo $r['emp_fname']; ?></td>
+                            <td><?php echo $r['emp_lname']; ?></td>
                             <td><?php echo $r['emp_phone']; ?></td>
                             <td><?php echo $r['mail']; ?></td>
                             <td><?php echo $r['username']; ?></td>
                             <td><?php echo $r['password']; ?></td>
                             <td>
-                                <a name="ID" href="editTaskCollector.php?ID=<?php echo $r['id']; ?>" class="btn btn-primary">Sửa</a>
-                                <a name="ID" href="deleteTask.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Bạn có muốn xóa nhiệm vụ này')" class="btn btn-danger">Xóa</a>
-                                <a href="showRoute.php?ID=<?php echo $r['id']; ?>" class="btn btn-dark" target=”_blank”>Đường đi</a>
+                                <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>" class="btn btn-primary">Sửa</a>
+                                <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                     <?php
@@ -214,14 +210,13 @@ $offset = ($page - 1) * $record1page;
 
                 <li class="page-item active"><a class="page-link"><?= $page ?></a></li>
 
-                <li class="page-item <?= ($page >= $total_pageC) ? 'disabled' : ''; ?>"><a class="page-link" <?= ($page < $total_pageC) ? 'href=?page=' . $next . '&sort=' . $sort_option . '&search=' . $_GET["search"] : ''; ?>>Next</a></li>
+                <li class="page-item <?= ($page >= $total_page) ? 'disabled' : ''; ?>"><a class="page-link" <?= ($page < $total_page) ? 'href=?page=' . $next . '&sort=' . $sort_option . '&search=' . $_GET["search"] : ''; ?>>Next</a></li>
             </ul>
             <div>
-                <strong>Page <?php echo $page ?> of <?= $total_pageC ?></strong>
+                <strong>Page <?php echo $page ?> of <?= $total_page ?></strong>
             </div>
         </div>
     </div>
-
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
