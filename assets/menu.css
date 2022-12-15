@@ -10,32 +10,12 @@ html{
     color: #000;
 }
 
-.Hotfood {
-    position: relative;
-    height: 387px;
-    left: 0px;
-    top: 82px;
-}
-
-.Hotfood .box {
-    position: absolute;
-
-    top: 140px;
-    left: 40px;
-    right: 40px;
-    
+.box {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-.Hotfood .content {
-    position: absolute;
-    width: 447px;
-    height: 62px;
-    left: 24px;
-    top: 18px;
-
+.content {
     font-style: normal;
     font-weight: 700;
     font-size: 96px;
@@ -43,7 +23,7 @@ html{
     margin-bottom: 50px;
 }
 
-.Hotfood .item {
+.item {
     position: relative;
     box-sizing: border-box;
     width: 336px;
@@ -56,7 +36,7 @@ html{
     border-radius: 4px;
 }
 
-.Hotfood .box .item .img-food {
+.box .item .img-food {
     width: 170px;
     height: 125px;
     padding: 10px;

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiang Res Home</title>
     <link rel="stylesheet" type="text/css" href="../../../../assets/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/footer.css">
     <link rel="stylesheet" type="text/css"
         href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet">
@@ -29,10 +31,8 @@
         <!--Begin hotFood-->
         <div id="hotFood">
             <div class="listFood">
-                <h2 style="font-size :96px;">Món Hot
-                    <i class="ti-star"></i>
-                </h2>
-                <ul style="font-size :34px" class="listHotFood">
+                <h2 style="font-size :60px;">Món Hot<i class="ti-star"></i></h2>
+                <ul style="font-size :30px" class="listHotFood">
                     <li>Đùi gà sốt me</li>
                     <li>Rau trộn</li>
                     <li>Bánh mâm xôi</li>

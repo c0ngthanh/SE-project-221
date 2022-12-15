@@ -13,7 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" type="text/css" href="../assets/AboutUs.css">
+    <link rel="stylesheet" type="text/css" href="../assets/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/footer.css">
     <link rel="stylesheet" type="text/css" href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="../assets/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,98 +25,60 @@
 </head>
 <body>
      <!--Begin NavBar-->
-     <div id="navBar">
-        <img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant" >
-        <div class="search-box">
-        <i class = "ti-search"></i>
-        <input class="location" type="text" placeholder="Nhập vị trí của bạn">
-        </div>
-        <li>
-            <ul id="subNav">
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="AboutUs.html">Về nhà hàng</a></li>
-              <li><a href="History.html">Lịch sử mua hàng</a></li>
-              <li><a href="cart.html">Giỏ hàng</a></li>
-            </ul>
-          </li>
-      </div>
-    <!--End NavBar-->
-    <!--Mon hot-->
-    <div class="Hotfood" id="wrap">
-      <div>
-        <h1 class="content">Món hot</h1>
-      </div>
-        <div class="box">
-            <div class="item">
-              <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
-                <h4 class="name-food">Pizza Nấm</h4>
-                <div class="rating">
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <p class="RateNum in"> 5</p>
-                </div>
-                <h4 class="dis-price-food">250.000đ</h4>
-                <h4 class="new-dis-price-food">225.000đ</h4>
-                <button type="button" class="add-food"><h5>+</h5></button>
-            </div>
-            <div class="item">
-              <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
-                <h4 class="name-food">Pizza Nấm</h4>
-                <div class="rating">
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <p class="RateNum in"> 5</p>
-                </div>
-                <h4 class="dis-price-food">250.000đ</h4>
-                <h4 class="new-dis-price-food">225.000đ</h4>
-                <button type="button" class="add-food"><h5>+</h5></button>
-            </div>
-            <div class="item">
-              <img src="../assets/image/Banh-mam-xoi.png" alt="Bánh mâm xôi" class="img-food">
-                <h4 class="name-food">Bánh mâm xôi</h4>
-                <div class="rating">
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <p class="RateNum in"> 5</p>
-                </div>
-                <h4 class="price-food">220.000đ</h4>
-                <button type="button" class="add-food"><h5>+</h5></button>
-            </div>
-            <div class="item">
-              <img src="../assets/image/Rau-tron.png" alt="Rau trộn" class="img-food">
-                <h4 class="name-food">Rau trộn</h4>
-                <div class="rating">
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <div class="fa fa-star checked in"></div>
-                  <p class="RateNum in"> 5</p>
-                </div>
-                <h4 class="price-food">45.000đ</h4>
-                <button type="button" class="add-food"><h5>+</h5></button>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-while">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant"></a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex" role="search">
+              <input class="form-control me-2 border border-light bg-light" type="search" placeholder="Tìm kiếm.."
+                  aria-label="Search">
+              <button class="btn border border-light " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                      height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg>
+              </button>
+          </form>
+          <div class="float-right collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="float-right navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Menu
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="menu.html">Cơm</a></li>
+                          <li><a class="dropdown-item" href="#">Đồ uống</a></li>
+                          <li><a class="dropdown-item" href="#">Ăn vặt</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Về nhà hàng</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Lịch sử mua hàng</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link">Giỏ hàng</a>
+                  </li>
+              </ul>
           </div>
-    </div>
-    <!--End Mon hot-->
-    <!--De xuat-->
-    <div class="Hotfood" id="wrap">
-      <div>
-        <h1 class="content">Đề xuất</h1>
       </div>
-      <div class="box">
+  </nav>
+  <!--End NavBar-->
+    <!--Mon hot-->
+    <div class="card border border-white" style="width: 100%; height: auto;">
+      <div class="card-body">
+        <h5 class="card-title content">Món hót</h5>
+        <div class="box">
           <div class="item">
-            <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
+            <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
               <h4 class="name-food">Pizza Nấm</h4>
               <div class="rating">
                 <div class="fa fa-star checked in"></div>
@@ -129,9 +92,19 @@
               <h4 class="new-dis-price-food">225.000đ</h4>
               <button type="button" class="add-food"><h5>+</h5></button>
           </div>
+        </div>
+      </div>
+    </div>
+    <!--End Mon hot-->
+    
+    <!--Cơm-->
+    <div class="card border border-white" style="width: 100%; height: auto;">
+      <div class="card-body">
+        <h5 class="card-title content">Cơm</h5>
+        <div class="box">
           <div class="item">
-            <img src="../assets/image/Bo-luc-lac.png" alt="Bò lúc lắc" class="img-food">
-              <h4 class="name-food">Bò lúc lắc</h4>
+            <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+              <h4 class="name-food">Pizza Nấm</h4>
               <div class="rating">
                 <div class="fa fa-star checked in"></div>
                 <div class="fa fa-star checked in"></div>
@@ -140,12 +113,23 @@
                 <div class="fa fa-star checked in"></div>
                 <p class="RateNum in"> 5</p>
               </div>
-              <h4 class="price-food">130.000đ</h4>
+              <h4 class="dis-price-food">250.000đ</h4>
+              <h4 class="new-dis-price-food">225.000đ</h4>
               <button type="button" class="add-food"><h5>+</h5></button>
           </div>
+        </div>
+      </div>
+    </div>
+    <!--End cơm-->
+
+    <!--Ăn vặt-->
+    <div class="card border border-white" style="width: 100%; height: auto;">
+      <div class="card-body">
+        <h5 class="card-title content">Ăn vặt</h5>
+        <div class="box">
           <div class="item">
-            <img src="../assets/image/Rau-tron.png" alt="Rau trộn" class="img-food">
-              <h4 class="name-food">Rau trộn</h4>
+            <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+              <h4 class="name-food">Pizza Nấm</h4>
               <div class="rating">
                 <div class="fa fa-star checked in"></div>
                 <div class="fa fa-star checked in"></div>
@@ -154,162 +138,41 @@
                 <div class="fa fa-star checked in"></div>
                 <p class="RateNum in"> 5</p>
               </div>
-              <h4 class="price-food">45.000đ</h4>
+              <h4 class="dis-price-food">250.000đ</h4>
+              <h4 class="new-dis-price-food">225.000đ</h4>
               <button type="button" class="add-food"><h5>+</h5></button>
           </div>
         </div>
-  </div>
-  <!--End Mon hot-->
-  <!--Mon hot-->
-  <div class="Hotfood" id="wrap">
-    <h1 class="content">Cơm</h1>
-    <div class="box">
-        <div class="item">
-          <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
-            <h4 class="name-food">Pizza Nấm</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="dis-price-food">250.000đ</h4>
-            <h4 class="new-dis-price-food">225.000đ</h4>
-            <button type="button" class="add-food"><h5>+</h5></button>
-        </div>
-        <div class="item">
-          <img src="../assets/image/Banh-mam-xoi.png" alt="Bánh mâm xôi" class="img-food">
-            <h4 class="name-food">Bánh mâm xôi</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="price-food">220.000đ</h4>
-            <button type="button" class="add-food"><h5>+</h5></button>
-        </div>
-        <div class="item">
-          <img src="../assets/image/Rau-tron.png" alt="Rau trộn" class="img-food">
-            <h4 class="name-food">Rau trộn</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="price-food">45.000đ</h4>
-            <button type="button" class="add-food"><h5>+</h5></button>
-        </div>
-      </div>
-</div>
-<!--End Mon hot-->
-<!--Mon hot-->
-<div class="Hotfood" id="wrap">
-  <h1 class="content">Ăn vặt</h1>
-  <div class="box">
-      <div class="item">
-        <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
-          <h4 class="name-food">Pizza Nấm</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="dis-price-food">250.000đ</h4>
-          <h4 class="new-dis-price-food">225.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
-      </div>
-      <div class="item">
-        <img src="../assets/image/Banh-mam-xoi.png" alt="Bánh mâm xôi" class="img-food">
-          <h4 class="name-food">Bánh mâm xôi</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="price-food">220.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
-      </div>
-      <div class="item">
-        <img src="../assets/image/Rau-tron.png" alt="Rau trộn" class="img-food">
-          <h4 class="name-food">Rau trộn</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="price-food">45.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
       </div>
     </div>
-</div>
-<!--End Mon hot-->
-<!--Mon hot-->
-<div class="Hotfood" id="wrap">
-  <h1 class="content">Giải khát</h1>
-  <div class="box">
-      <div class="item">
-        <img src="../assets/image/Pizza.png" alt="Pizza" class="img-food">
-          <h4 class="name-food">Pizza Nấm</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
+
+    <!--End Ăn vặt-->
+
+    <!--Giải khát-->
+    <div class="card border border-white" style="width: 100%; height: auto;">
+      <div class="card-body">
+        <h5 class="card-title content">Giải khát</h5>
+        <div class="box">
+          <div class="item">
+            <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+              <h4 class="name-food">Pizza Nấm</h4>
+              <div class="rating">
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <p class="RateNum in"> 5</p>
+              </div>
+              <h4 class="dis-price-food">250.000đ</h4>
+              <h4 class="new-dis-price-food">225.000đ</h4>
+              <button type="button" class="add-food"><h5>+</h5></button>
           </div>
-          <h4 class="dis-price-food">250.000đ</h4>
-          <h4 class="new-dis-price-food">225.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
-      </div>
-      <div class="item">
-        <img src="../assets/image/Banh-mam-xoi.png" alt="Bánh mâm xôi" class="img-food">
-          <h4 class="name-food">Bánh mâm xôi</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="price-food">220.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
-      </div>
-      <div class="item">
-        <img src="../assets/image/Rau-tron.png" alt="Rau trộn" class="img-food">
-          <h4 class="name-food">Rau trộn</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="price-food">45.000đ</h4>
-          <button type="button" class="add-food"><h5>+</h5></button>
+        </div>
       </div>
     </div>
-</div>
-<!--End Mon hot-->
+
+    <!--End giải khát-->
 
     
     <div id="Footer">

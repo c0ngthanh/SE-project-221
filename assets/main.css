@@ -10,25 +10,6 @@ html{
     color: #000;
 }
 
-#main{}
-
-
-.navbar .logoNav {
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    border-radius: 296px;
-    position: relative;
-}
-
-.d-flex {
-    background: #F9FAFA;
-}
-
-.collapse {
-    margin-left: 40%;
-}
-
 #hotFood{
 height: 555px;
 background: #FDF5AA;
@@ -276,75 +257,3 @@ background: #FDF5AA;
     top: 72px;
     color:#fff;
 }
-#Footer{
-    position: relative;
-    margin-top: 110px;
-    height: 468px;
-    background-color: #FDF5AA;
-    overflow: hidden;
-}
-#Footer .logo-bottom, #Footer .last{
-    position: relative;
-    top: 20px;
-    border-bottom: solid 2px #EB5757    ;
-    padding-bottom: 16px;
-    margin: 0px 5%;
-}
-#Footer .logo{  
-    width: 62px;
-    border-radius: 50%;
-    margin-left: 40px;
-}
-#Footer .list{
-    margin: 0px 5%;
-    margin-top: 32px;
-    overflow: hidden;
-}
-#Footer .list >div{
-    float:left;
-}
-#Footer .title{
-    text-align: center;
-    display:block;
-    color:#000;
-    text-decoration: none;
-    margin-top:16px;
-}
-#Footer .ContactUs{
-    width: 33.33333%;
-    overflow: hidden;
-}
-#Footer .ContactUs >div{
-    width: 100%;
-    margin-top:25px;
-    overflow: hidden;
-}
-#Footer .icon{
-    float: left;
-    margin-left: 93px;
-}
-#Footer .name{
-    float: left;
-    line-height: 46px;
-    margin-left: 23px;
-    color: black;
-    text-decoration: none;
-}
-#Footer .instagram{ 
-    position: relative;
-}
-#Footer .facebook .icon{
-    padding: 5.5px 14px;
-}
-#Footer .Questions{
-    float:left;
-    width:33%;
-} 
-#Footer .Questions a{
-    margin-top: 25px;
-    display:block;
-    line-height: 46px;
-    color:#000;
-    text-decoration: none;
-    text-align: center;
-} 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../assets/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/footer.css">
+    <link rel="stylesheet" type="text/css" href="../assets/detail-food.css">
+    <link rel="stylesheet" type="text/css" href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <!--Begin NavBar-->
+    <nav class="navbar navbar-expand-lg bg-while">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant"></a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 border border-light bg-light" type="search" placeholder="Tìm kiếm.."
+                    aria-label="Search">
+                <button class="btn border border-light " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </form>
+            <div class="float-right collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="float-right navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="menu.html">Cơm</a></li>
+                            <li><a class="dropdown-item" href="#">Đồ uống</a></li>
+                            <li><a class="dropdown-item" href="#">Ăn vặt</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Về nhà hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lịch sử mua hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Giỏ hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End NavBar-->
+
+
+    <div class="card mb-3 border border-white" style="max-width: 100%;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../assets/image/Banh-mam-xoi.png" class="card-img" alt="Bánh mâm xôi" style="max-width: 600px; max-height: 400px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text">Bánh mâm xôi</h5>
+              <div class="rating">
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <p class="RateNum in text"> 5</p>
+              </div>
+              <p class="card-text in text" style="text-decoration-line: line-through;">250.000đ</p>
+              <p class="in discount text">-10%</p>
+              <p class="card-text text" style="color:red;">225.000đ</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p style="font-size: 20px">Bánh quả mâm xôi nướng phủ đường không chỉ có phần vỏ bánh rất giòn, thơm, mà còn có phần nhân bánh bên trong rất ngon với hương vị chua chua ngọt ngọt.</p>
+        <button class="btn btn-primary order-button" type="submit">Thêm vào giỏ hàng <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg></i></button>
+      </div>
+
+      <div class="card" style="width: 80%;">
+        <div class="card-body">
+          <h5 class="card-title text">Đánh giá</h5>
+          <div>
+            <img src="../assets/image/avatar_pp_1.png" alt="" class="avatar in">
+            <p class="card-text in name-user">Công Thành</p>
+            <div class="rating">
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <p class="RateNum in"> 5</p>
+            </div>
+            <p class="card-text in comment">Món ăn rất ngon, hợp khẩu vị.</p>
+          </div>
+          <div>
+            <img src="../assets/image/avatar_pp_1.png" alt="" class="avatar in">
+            <p class="card-text in name-user">Công Thành</p>
+            <div class="rating">
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <div class="fa fa-star checked in"></div>
+                <p class="RateNum in"> 5</p>
+            </div>
+            <p class="card-text in comment">Món ăn rất ngon, hợp khẩu vị.</p>
+          </div>
+          
+        </div>
+      </div>
+
+
+
+
+
+
+    <div id="Footer">
+        <div class="logo-bottom">
+          <img class="logo" src="../assets/image/logo.png" alt="logo">
+        </div>
+        <div class="list">
+          <div class="ContactUs">
+            <h3 class="title">Theo dõi chúng tôi tại</h3>
+            <div class="instagram"> 
+              <img class="icon"src="../assets/image/InstaIcon.png" alt="Instagram icon">
+              <a href="" class="name">Instagram</a>
+            </div>
+            <div class="facebook">
+              <img class="icon"src="../assets/image/FacebookIcon.Png" alt="Facebook icon">
+              <p href="" class="name">Instagram</p>
+            </div>
+            <div class="twitter">
+              <img class="icon" src="../assets/image/TwitterIcon.png" alt="Twitter icon">
+              <p href="" class="name">Instagram</p>
+            </div>
+          </div>
+          <div class="Questions">
+            <h3 class="title">Các câu hỏi thường gặp</h3>
+            <a href="" class="link">Liên Hệ</a>
+            <a href="" class="link">Hỗ Trợ</a>
+            <a href="" class="link">Feed back</a>
+          </div>
+        </div> 
+        <div class="last"></div>
+      </div>
+</body>
+</html>

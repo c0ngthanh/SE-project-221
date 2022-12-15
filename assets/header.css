@@ -1,0 +1,15 @@
+.navbar .logoNav {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 296px;
+    position: relative;
+}
+
+.d-flex {
+    background: #F9FAFA;
+}
+
+.collapse {
+    margin-left: 40%;
+}
