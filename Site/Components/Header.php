@@ -20,16 +20,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Cơm</a></li>
-                        <li><a class="dropdown-item" href="#">Đồ uống</a></li>
-                        <li><a class="dropdown-item" href="#">Ăn vặt</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Views/frontend/products/index.php">Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Về nhà hàng</a>
