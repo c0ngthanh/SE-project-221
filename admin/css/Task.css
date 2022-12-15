@@ -1,0 +1,17 @@
+#content >.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+}
+.edit{
+    display:inline-block;
+}
+.nav_sort{
+    display: flex;
+}
+.modal-body label{
+    color: #6956E5;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
