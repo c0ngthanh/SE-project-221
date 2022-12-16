@@ -10,7 +10,22 @@ html{
     color: #000;
 }
 
-.container-fluid .title,#discount .title,#Rate .title{
+.owl-carousel {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.owl-carousel .item {
+    max-width: 400px;
+}
+
+.owl-carousel .button-cart {
+    border: none;
+    background: #F2C94C;
+    width: 200px;
+}
+
+.title,#discount .title,#Rate .title{
     /* position: absolute; */
     text-align: center;
     font-weight: 700;
@@ -23,66 +38,7 @@ html{
     margin-left: 20px;
 }
 
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
-.col-item
-{
-    border: 1px solid #E1E1E1;
-    border-radius: 5px;
-    background: #FFF;
-}
-.col-item .photo img
-{
-    margin: 0 auto;
-    width: 100%;
-    border-radius: 5px 5px 0px 0px;
-}
-
-.col-item .info
-{
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    margin-top: 1px;
-}
-
-.col-item:hover .info {
-    background-color: #F5F5DC;
-}
-.col-item .price
-{
-    /*width: 50%;*/
-    float: left;
-    margin-top: 5px;
-}
-
-.col-item .price h5
-{
-    line-height: 20px;
-    margin: 0;
-}
-
-.price-text-color
-{
-    color: #219FD1;
-}
-
-.col-item .separator
-{
-    border-top: 1px solid #E1E1E1;
-}
-
-.col-item .separator p
-{
-    line-height: 20px;
-    margin-bottom: 0;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.col-item .separator p i
-{
-    margin-right: 5px;
-}
-.col-item .btn-add
+.btn-add
 {
     width: 50%;
     margin-left: 25%;
@@ -94,7 +50,8 @@ html{
     position: relative;
 }
 #discount .note{
-    margin-left: 126px;
+    margin-left: 36%;
+    margin-right: 34%;
     font-size: 20px;
     margin-top: 50px;
 }
