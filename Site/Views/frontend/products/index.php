@@ -23,263 +23,56 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="../assets/header.css">
   <link rel="stylesheet" type="text/css" href="../assets/footer.css">
-  <link rel="stylesheet" type="text/css" href="../assets/menu.css">
+  <link rel="stylesheet" type="text/css" href="../assets/main.css">
 </head>
 
 <body>
-  <!--Begin NavBar-->
-  <nav class="navbar navbar-expand-lg bg-while">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant"></a>
-      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2 border border-light bg-light" type="search" placeholder="Tìm kiếm.."
-          aria-label="Search">
-        <button class="btn border border-light " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-            height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-          </svg>
-        </button>
-      </form>
-      <div class="float-right collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="float-right navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="menu.html">Cơm</a></li>
-              <li><a class="dropdown-item" href="#">Đồ uống</a></li>
-              <li><a class="dropdown-item" href="#">Ăn vặt</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Về nhà hàng</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Lịch sử mua hàng</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Giỏ hàng</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!--End NavBar-->
+
+    <?php
+        include_once './Components/Header.php';
+    ?>
   <!--Mon hot-->
   <div class="card border border-white" style="width: 100%; height: auto;">
     <div class="card-body">
       <h5 class="card-title content">Món chính</h5>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="box">
-            <a href="#">
-              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
-            </a>
-            <h4 class="name-food">Pizza Nấm</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="dis-price-food">250.000đ</h4>
-            <h4 class="new-dis-price-food">225.000đ</h4>
-            
-            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <a href="#">
-              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
-            </a>
-            <h4 class="name-food">Pizza Nấm</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="dis-price-food">250.000đ</h4>
-            <h4 class="new-dis-price-food">225.000đ</h4>
-            
-            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <a href="#">
-              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
-            </a>
-            <h4 class="name-food">Pizza Nấm</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="dis-price-food">250.000đ</h4>
-            <h4 class="new-dis-price-food">225.000đ</h4>
-            
-            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <a href="#">
-              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
-            </a>
-            <h4 class="name-food">Pizza Nấm</h4>
-            <div class="rating">
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <div class="fa fa-star checked in"></div>
-              <p class="RateNum in"> 5</p>
-            </div>
-            <h4 class="dis-price-food">250.000đ</h4>
-            <h4 class="new-dis-price-food">225.000đ</h4>
-            
-            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
+    <div class="owl-carousel owl-theme">
+            <?php 
+                $data = [];
+                foreach ($products as $products){
+                    if($products['product_category']==1)
+                    {
+                        array_push($data,$products);
+                    }
+                    else continue;
+                }
+                foreach($data as $data){
+            ?>
+            <div class="item">
+                <div class="card" style="width: auto;">
+                    <img class="card-img-top" src="../../../../assets/image/<?=$data['imgURL']?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 30px;"><?= $data['name']?></h5>
+                        <!-- <p class="card-text" style="text-decoration-line: line-through; font-size: 25px;">45.000đ</p> -->
+                        <p class="card-text" style="font-size: 30px;"><?= $data['price'] ?></p>
+                        <div class="text-center">
+                            <a href="?controller=cart&action=store&id=<?= $data['id'] ?>" class="btn btn-primary button-cart text-dark">Thêm vào giỏ hàng <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+        </div>
   </div>
   <!--End Mon hot-->
-
-  <!-- Cơm
-  <div class="card border border-white" style="width: 100%; height: auto;">
-    <div class="card-body">
-      <h5 class="card-title content">Cơm</h5>
-      <div class="box">
-        <div class="item">
-          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
-          <h4 class="name-food">Pizza Nấm</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="dis-price-food">250.000đ</h4>
-          <h4 class="new-dis-price-food">225.000đ</h4>
-          <button type="button" class="add-food">
-            <h5>+</h5>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!--End cơm-->
-
-  <!--Ăn vặt-->
-  <!-- <div class="card border border-white" style="width: 100%; height: auto;">
-    <div class="card-body">
-      <h5 class="card-title content">Ăn vặt</h5>
-      <div class="box">
-        <div class="item">
-          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
-          <h4 class="name-food">Pizza Nấm</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="dis-price-food">250.000đ</h4>
-          <h4 class="new-dis-price-food">225.000đ</h4>
-          <button type="button" class="add-food">
-            <h5>+</h5>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!--End Ăn vặt-->
-
-  <!--Giải khát-->
-  <!-- <div class="card border border-white" style="width: 100%; height: auto;">
-    <div class="card-body">
-      <h5 class="card-title content">Giải khát</h5>
-      <div class="box">
-        <div class="item">
-          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
-          <h4 class="name-food">Pizza Nấm</h4>
-          <div class="rating">
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <div class="fa fa-star checked in"></div>
-            <p class="RateNum in"> 5</p>
-          </div>
-          <h4 class="dis-price-food">250.000đ</h4>
-          <h4 class="new-dis-price-food">225.000đ</h4>
-          <button type="button" class="add-food">
-            <h5>+</h5>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!--End giải khát-->
-
-  <div id="Footer">
-    <div class="logo-bottom">
-      <img class="logo" src="../assets/image/logo.png" alt="logo">
-    </div>
-    <div class="list">
-      <div class="ContactUs">
-        <h3 class="title">Theo dõi chúng tôi tại</h3>
-        <div class="instagram">
-          <img class="icon" src="../assets/image/InstaIcon.png" alt="Instagram icon">
-          <a href="" class="name">Instagram</a>
-        </div>
-        <div class="facebook">
-          <img class="icon" src="../assets/image/FacebookIcon.Png" alt="Facebook icon">
-          <p href="" class="name">Instagram</p>
-        </div>
-        <div class="twitter">
-          <img class="icon" src="../assets/image/TwitterIcon.png" alt="Twitter icon">
-          <p href="" class="name">Instagram</p>
-        </div>
-      </div>
-      <div class="Questions">
-        <h3 class="title">Các câu hỏi thường gặp</h3>
-        <a href="" class="link">Liên Hệ</a>
-        <a href="" class="link">Hỗ Trợ</a>
-        <a href="" class="link">Feed back</a>
-      </div>
-    </div>
-    <div class="last"></div>
-  </div>
+  <?php
+        include_once './Components/Footer.php';
+    ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
     integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -304,6 +97,10 @@
       }
     })
   </script>
+  <?php
+    echo '<pre>';
+    print_r($products);
+  ?>
 </body>
 
 </html>

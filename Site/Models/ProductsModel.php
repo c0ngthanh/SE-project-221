@@ -1,9 +1,12 @@
 <?php
     class ProductsModel extends BaseModel{
         const TABLE = 'products';
-        public function getAll($select = ['*'],$orderBys =[],$limit =15){
+        public function getAll($select = ['*'],$orderBys =[],$limit =10){
            return $this->All(self::TABLE,$select,$orderBys,$limit);
         }
+        public function getAllbyCategoryId($select = ['*'],$orderBys =[],$limit =10,$categoryId){
+            return $this->getAllbyCategory(self::TABLE,$select,$orderBys,$limit,$categoryId);
+         }
         
         public function findById($id){
             return $this->find(self::TABLE,$id,'id');
@@ -17,9 +20,9 @@
             $this->update(self::TABLE,$id,$data,'id');
         }
 
-        public function getProductByCategoryId($categoryId){
+        // public function getProductByCategoryId($categoryId){
             
-        }
+        // }
 
         public function delete($id){
             return __METHOD__;

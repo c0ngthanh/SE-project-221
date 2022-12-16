@@ -7,7 +7,7 @@ class ProductsController extends BaseController {
         $this->ProductsModel = new ProductsModel;
     }
     public function index(){
-        $select = ['id','name'];
+        $select = ['*'];
         $order = [
             'column' => 'id',
             'order' => 'desc'

@@ -34,25 +34,43 @@ html{
     border-radius: 4px;
 }
 .item .box >a{
-    width: 250px;
-    margin-top:15px
+    position: absolute;
+    width: 50%;
+    margin-top:15px;
+    left:10px;
+    max-height: 234px;
 }
-.item >a img{
-    width: 250px;
+.item .box >a img{
+    width: 100%;
     object-fit: contain;
     margin-top: 20px;
+    max-height: 200px;
+}
+.item .name-food,.item .rating,.item .dis-price-food,.item .new-dis-price-food{
+    position: absolute;
+    display: inline-block;
+    right: 10%;
+    left:60%;
+    font-size: 160%;
 }
 .item .name-food{
-    margin-top: 75px;
-    margin-right: 10px;
-    display: flex;
+    top:10%;
 }
-.item .rating,.item .dis-price-food,.item .new-dis-price-food{
-    margin-top:25px;
+.item .rating{
+    top:20%;
+}
+.item .dis-price-food{
+    top:40%;
+}
+.RateNum{
+    display: inline-block;
+}
+.item .new-dis-price-food{
+    top:55%;
 }
 .item button{
     position: absolute;
-    top: 250px;
+    bottom: 5%;
     padding: 10px 20px;
 }
 .checked{

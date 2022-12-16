@@ -24,6 +24,25 @@
             
             return $data;
         }
+        /* Lay ra du lieu theo category_id */
+        public function getAllbyCategory($table, $select = ['*'], $orderBys =[], $limit = 10,$categoryId){
+            $columns = implode(',',$select);
+            $orderByString = implode(' ',$orderBys);
+            // die ($orderByString);
+            if($orderByString){
+                $sql = "select ${columns} from ${table} where product_category = ${categoryId} order by ${orderByString} limit ${limit}";
+            }
+            else{
+                $sql = "select ${columns} from ${table} limit ${limit}";
+            }
+            $query = $this->_query($sql);
+            $data = [];
+            while($row=mysqli_fetch_assoc($query)){
+                array_push($data,$row);
+            }
+            
+            return $data;
+        }
 
         /* Lay ra 1 bang ghi trong bang */
         public function find($table,$id,$column_id){
