@@ -6,7 +6,7 @@
         }
         
         public function findById($id){
-            return $this->find(self::TABLE,$id,'category_id');
+            return $this->find(self::TABLE,$id,'id');
         }
 
         public function delete($id){
