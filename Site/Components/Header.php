@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-while">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant"></a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
