@@ -18,9 +18,9 @@ $offset = ($page - 1) * $record1page;
         <!-- Nav pills -->
         <form class="form-inline" action="" method="GET">
             <select type="sort" class="form-control mb-2 mr-sm-2" id="sort" name="sort">
-                <option value="orders_id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "orders_id") {
+                <option value="id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "id") {
                                                 echo "selected";
-                                            } ?>>ID hóa đơn</option>
+                                            } ?>>ID</option>
                 <option value="time" <?php if (isset($_GET['sort']) && $_GET['sort'] == "time") {
                                             echo "selected";
                                         } ?>>Thời gian</option>
@@ -37,11 +37,9 @@ $offset = ($page - 1) * $record1page;
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>ID hóa đơn</th>
+            <th>ID</th>
             <th>SĐT</th>
-            <th>ID món ăn</th>
-            <th>Số lượng</th>
-            <th>Ghi chú</th>
+            <th>Giá</th>
             <th>Địa chỉ</th>
             <th>Thời gian</th>
             <th>Thanh toán</th>
@@ -67,19 +65,19 @@ $offset = ($page - 1) * $record1page;
         while ($r = mysqli_fetch_assoc($result)) {
         ?>
             <tr>
-                <td><?php echo $r['orders_id']; ?></td>
-                <td><?php echo $r['orders_phone']; ?></td>
-                <td><?php echo $r['orders_dish_id']; ?></td>
-                <td><?php echo $r['dish_qt']; ?></td>
-                <td><?php echo $r['text']; ?></td>
-                <td><?php echo $r['orders_diachi']; ?></td>
+                <td><?php echo $r['id']; ?></td>
+                <td><?php echo $r['order_phone']; ?></td>
+                <td><?php echo $r['price']; ?></td>
+                <td><?php echo $r['diachi_id']; ?></td>
                 <td><?php echo $r['time']; ?></td>
                 <td><?php echo $r['payment']; ?></td>
                 <td><?php echo $r['status']; ?></td>
                 <td>
+                    <a name="ID" href="detailOrder.php?ID=<?php echo $r['id']; ?>&type=orders" class="btn btn-dark"><i class="ti-info"></i></a>
                     <?php
-                    if ($r['status'] == 'waiting') { ?> <a name="ID" href="confirmOrder.php?ID=<?php echo $r['orders_id']; ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
-                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['orders_id']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
+                    if ($r['status'] == 'waiting') { ?>
+                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
+                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
                 </td>
             </tr>
         <?php
