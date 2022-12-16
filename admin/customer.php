@@ -65,7 +65,7 @@ $offset = ($page - 1) * $record1page;
                 <td><?php echo $r['lname']; ?></td>
                 <td><?php echo $r['fname']; ?></td>
                 <td>
-                    <a name="ID" href="detailCustomer.php?ID=<?php echo $r['phone']; ?>&type=customer" class="btn btn-dark"><i class="ti-info"> Xem thông tin</i></a>
+                    <a name="ID" href="detailCustomer.php?ID=<?php echo $r['phone']; ?>&type=customer" class="btn btn-dark"><i class="ti-info"></i> Xem thông tin</a>
             </tr>
         <?php
         }

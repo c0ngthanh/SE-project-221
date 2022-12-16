@@ -42,8 +42,8 @@ $query = "SELECT `status` from orders where id='$id'";
 $r=mysqli_fetch_array(mysqli_query($conn, $query));
 if ($r['status']=='waiting') {
 ?>
-<a name="ID" href="confirmOrder.php?ID=<?=$id?>'" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"> Xác nhận đơn hàng</i></a>
-<a name="ID" href="cancelOrder.php?ID=<?=$id?>" onclick="return confirm('Hủy đơn hàng?')" class="btn btn-danger"><i class="ti-close"> Hủy đơn hàng</i></a>
+<a name="ID" href="confirmOrder.php?ID=<?=$id?>'" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i> Xác nhận đơn hàng</a>
+<a name="ID" href="cancelOrder.php?ID=<?=$id?>" onclick="return confirm('Hủy đơn hàng?')" class="btn btn-danger"><i class="ti-close"></i> Hủy đơn hàng</a>
 <?php }
 else if ($r['status']=='canceled') echo 'Đã hủy đơn hàng';
 else echo 'Đã thanh toán' ?>
