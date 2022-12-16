@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 04:40 PM
+-- Generation Time: Dec 16, 2022 at 04:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `se_asm`
+-- Database: `se-project-221`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +46,8 @@ INSERT INTO `addresslist` (`id`, `name`, `ward`, `district`, `diachi_phone`) VAL
 (4, 'KTX Dai hoc Ngan hang', 'Linh chieu', 'Thu Duc', '0726183978'),
 (5, '15 D5', '25', 'Binh Thanh', '0781658690'),
 (6, '59C Nguyen Dinh Chieu', '6', '3', '0870482906'),
-(7, '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565');
+(7, '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565'),
+(8, 'KTX khu B DHQG', 'Linh Trung', 'Thu Duc', '0602949213');
 
 -- --------------------------------------------------------
 
@@ -114,7 +115,7 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`, `username`, `password`) VALUES
-(1, 'cong', 'cong', '0312167832', 'cong@gmail.com', 'congcong', '1'),
+(1, 'cong', 'thanh', '0312167832', 'cong@gmail.com', 'congcong', '1'),
 (2, 'cong', 'hung', '0312871832', 'chung@gmail.com', 'hung', '1'),
 (3, 'cong', 'thanh', '0312162341', 'thanh@gmail.com', 'thanhcong', '1'),
 (4, 'duy', 'cong', '0312167432', 'duy@gmail.com', 'congduy', '1'),
@@ -258,7 +259,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `addresslist`
 --
 ALTER TABLE `addresslist`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `category`
