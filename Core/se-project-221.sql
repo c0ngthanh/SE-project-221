@@ -35,13 +35,13 @@ CREATE TABLE `addresslist` (
   `diachi_phone` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 INSERT INTO `addresslist` (`id`, `name`, `ward`, `district`, `diachi_phone`) VALUES
-(5000, 'KTX khu A DHQG', 'Linh Trung', 'Thu Duc', '0219883236'),
-(5001, '268 Ly Thuong Kiet', '14', '10', '0602949213'),
-(5002, '1 Vo Van Ngan', 'Linh Chieu', 'Thu Duc', '0672182711'),
-(5003, 'KTX Dai hoc Ngan hang', 'Linh chieu', 'Thu Duc', '0726183978'),
-(5004, '15 D5', '25', 'Binh Thanh', '0781658690'),
-(5005, '59C Nguyen Dinh Chieu', '6', '3', '0870482906'),
-(5006, '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565');
+('', 'KTX khu A DHQG', 'Linh Trung', 'Thu Duc', '0219883236'),
+('', '268 Ly Thuong Kiet', '14', '10', '0602949213'),
+('', '1 Vo Van Ngan', 'Linh Chieu', 'Thu Duc', '0672182711'),
+('', 'KTX Dai hoc Ngan hang', 'Linh chieu', 'Thu Duc', '0726183978'),
+('', '15 D5', '25', 'Binh Thanh', '0781658690'),
+('', '59C Nguyen Dinh Chieu', '6', '3', '0870482906'),
+('', '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565');
 -- --------------------------------------------------------
 
 --
@@ -97,16 +97,16 @@ CREATE TABLE `employee` (
   `password` char(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`, `username`, `password`) VALUES
-(1000, 'cong', 'cong', '0312167832', 'cong@gmail.com', 'congcong', '1'),
-(1001, 'cong', 'hung', '0312871832', 'chung@gmail.com', 'hung', '1'),
-(1002, 'cong', 'thanh', '0312162341', 'thanh@gmail.com', 'thanhcong', '1'),
-(1003, 'duy', 'cong', '0312167432', 'duy@gmail.com', 'congduy', '1'),
-(1004, 'cong', 'quang', '0312112832', 'quang@gmail.com', 'quang', '1'),
-(1005, 'tien', 'cong', '0312123432', 'tien@gmail.com', 'congg', '1'),
-(1006, 'cong', 'chua', '0312162342', 'congchua@gmail.com', 'congchua', '1'),
-(1007, 'quan', 'cong', '0134467832', 'quan@gmail.com', 'congng', '1'),
-(1008, 'tuong', 'cong', '0312734532', 'coong@gmail.com', 'coong', '1'),
-(1009, 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1');
+('', 'cong', 'cong', '0312167832', 'cong@gmail.com', 'congcong', '1'),
+('', 'cong', 'hung', '0312871832', 'chung@gmail.com', 'hung', '1'),
+('', 'cong', 'thanh', '0312162341', 'thanh@gmail.com', 'thanhcong', '1'),
+('', 'duy', 'cong', '0312167432', 'duy@gmail.com', 'congduy', '1'),
+('', 'cong', 'quang', '0312112832', 'quang@gmail.com', 'quang', '1'),
+('', 'tien', 'cong', '0312123432', 'tien@gmail.com', 'congg', '1'),
+('', 'cong', 'chua', '0312162342', 'congchua@gmail.com', 'congchua', '1'),
+('', 'quan', 'cong', '0134467832', 'quan@gmail.com', 'congng', '1'),
+('', 'tuong', 'cong', '0312734532', 'coong@gmail.com', 'coong', '1'),
+('', 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1');
 -- --------------------------------------------------------
 
 --
@@ -155,9 +155,9 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `imgURL`, `product_category`) VALUES
-(10000, 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png',1),
-(10001, 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png',1),
-(10002, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png',1);
+('', 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png',1),
+('', 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png',1),
+('', 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png',1);
 --
 -- Indexes for dumped tables
 --
@@ -222,19 +222,19 @@ ALTER TABLE `addresslist`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10000;
+  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20000;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders_detail`
@@ -243,7 +243,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
