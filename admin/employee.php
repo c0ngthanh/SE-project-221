@@ -78,8 +78,8 @@ $offset = ($page - 1) * $record1page;
                 <td><?php echo $r['username']; ?></td>
                 <td><?php echo $r['password']; ?></td>
                 <td>
-                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>&type=employee" class="btn btn-primary">Sửa</a>
-                    <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger">Xóa</a>
+                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>&type=employee" class="btn btn-success"><i class="ti-pencil"></i></a>
+                    <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger"><i class="ti-close"></i></a>
                 </td>
             </tr>
         <?php

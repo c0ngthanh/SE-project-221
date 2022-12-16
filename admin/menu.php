@@ -44,6 +44,7 @@ $offset = ($page - 1) * $record1page;
             <th>Mô tả</th>
             <th>Giá</th>
             <th>Ảnh minh họa</th>
+            <th>Loại</th>
             <th>Hành động</th>
         </tr>
     </thead>
@@ -70,6 +71,11 @@ $offset = ($page - 1) * $record1page;
                 <td><?php echo $r['description']; ?></td>
                 <td><?php echo $r['price']; ?></td>
                 <td><img src="img/<?= $r['imgURL'] ?>" width="150px" height="100px" style="object-fit: cover;"></td>
+                <td><?php
+                    $category_ID = $r['product_category'];
+                    $loai=mysqli_fetch_assoc(mysqli_query($conn,"SELECT name from category where id='$category_ID'"));
+                    echo $loai['name']; 
+                ?></td>
                 <td>
                     <a name="ID" href="editProduct.php?ID=<?php echo $r['id']; ?>&type=menu" class="btn btn-primary"><i class="ti-pencil"></i></a>
                     <a name="ID" href="deleteProduct.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Xác nhận xóa?')" class="btn btn-danger"><i class="ti-trash"></i></a>
@@ -121,7 +127,16 @@ include 'footer.php';
                     </div>
                     <div class="form-group">
                         <label for="product_category">Loại món ăn</label>
-                        <input class="form-control" id="product_category" name="product_category">
+                        <select name="product_category" id="product_category"class="form-control">
+                        <?php
+                            $type=mysqli_query($conn,"SELECT * from category");
+                            while($loaidoan=mysqli_fetch_assoc($type)){
+                                ?>
+                                <option value="<?= $loaidoan['name'] ?>"><?= $loaidoan['name'] ?></option>
+                                <?php
+                            }
+                        ?>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="des">Ảnh</label>

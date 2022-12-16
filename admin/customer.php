@@ -18,18 +18,18 @@ $offset = ($page - 1) * $record1page;
         <!-- Nav pills -->
         <form class="form-inline" action="" method="GET">
             <select type="sort" class="form-control mb-2 mr-sm-2" id="sort" name="sort">
-                <option value="id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "id") {
+                <option value="phone" <?php if (isset($_GET['sort']) && $_GET['sort'] == "phone") {
                                                 echo "selected";
-                                            } ?>>ID</option>
-                <option value="time" <?php if (isset($_GET['sort']) && $_GET['sort'] == "time") {
+                                            } ?>>Số điện thoại</option>
+                <option value="lname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "lname") {
                                             echo "selected";
-                                        } ?>>Thời gian</option>
-                <option value="status" <?php if (isset($_GET['sort']) && $_GET['sort'] == "status") {
+                                        } ?>>Họ</option>
+                <option value="fname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "fname") {
                                             echo "selected";
-                                        } ?>>Tình trạng</option>
+                                        } ?>>Tên</option>
             </select>
             <input type="text" class="form-control mb-2 mr-sm-2" name="search">
-            <input type="hidden" name="type" value="orders">
+            <input type="hidden" name="type" value="customer">
             <button type="submit" class="btn btn-primary mb-2" name="page" value="<?= $page ?>">Sort</button>
         </form>
     </div>
@@ -37,25 +37,21 @@ $offset = ($page - 1) * $record1page;
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>ID</th>
             <th>SĐT</th>
-            <th>Giá</th>
-            <th>Địa chỉ</th>
-            <th>Thời gian</th>
-            <th>Thanh toán</th>
-            <th>Tình trạng</th>
+            <th>Họ</th>
+            <th>Tên</th>
             <th>Hành động</th>
         </tr>
     </thead>
     <tbody>
         <?php
         $sort_option = $_GET['sort'];
-        $query = "SELECT * from `orders` order by $sort_option limit $offset,$record1page";
-        $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from `orders`");
+        $query = "SELECT * from `customer` order by $sort_option limit $offset,$record1page";
+        $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from `customer`");
         if (isset($_GET["search"]) && !empty($_GET["search"])) {
             $sort_option = $_GET['sort'];
             $str = $_GET['search'];
-            $query = "SELECT * from `orders` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
+            $query = "SELECT * from `customer` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
             $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `employee` where $sort_option REGEXP '$str+') as a");
         }
         $records = mysqli_fetch_array($result_count);
@@ -65,20 +61,11 @@ $offset = ($page - 1) * $record1page;
         while ($r = mysqli_fetch_assoc($result)) {
         ?>
             <tr>
-                <td><?php echo $r['id']; ?></td>
-                <td><?php echo $r['order_phone']; ?></td>
-                <td><?php echo $r['price']; ?></td>
-                <td><?php echo $r['diachi_id']; ?></td>
-                <td><?php echo $r['time']; ?></td>
-                <td><?php echo $r['payment']; ?></td>
-                <td><?php echo $r['status']; ?></td>
+                <td><?php echo $r['phone']; ?></td>
+                <td><?php echo $r['lname']; ?></td>
+                <td><?php echo $r['fname']; ?></td>
                 <td>
-                    <a name="ID" href="detailOrder.php?ID=<?php echo $r['id']; ?>&type=orders" class="btn btn-dark"><i class="ti-info"></i></a>
-                    <?php
-                    if ($r['status'] == 'waiting') { ?>
-                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
-                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
-                </td>
+                    <a name="ID" href="detailCustomer.php?ID=<?php echo $r['phone']; ?>&type=customer" class="btn btn-dark"><i class="ti-info"></i> Xem thông tin</a>
             </tr>
         <?php
         }
