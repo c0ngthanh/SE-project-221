@@ -29,42 +29,54 @@
         ?>
         <!--End NavBar-->
         <!--Begin hotFood-->
-        <div id="hotFood">
-            <div class="listFood">
-                <h2 style="font-size :60px;">Món Hot<i class="ti-star"></i></h2>
-                <ul style="font-size :30px" class="listHotFood">
-                    <li>Đùi gà sốt me</li>
-                    <li>Rau trộn</li>
-                    <li>Bánh mâm xôi</li>
-                    <li>Trứng luộc Kiểu pháp</li>
-                </ul>
-            </div>
-            <div class="imgFood">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../../../../assets/image/hotfood1.webp" class="d-block w-100" alt="..."
-                                width="700" height="400">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../../../../assets/image/Sfood1.jpg" class="d-block w-100" alt="..." width="700"
-                                height="400">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../../../../assets/image/hotfood1.webp" class="d-block w-100" alt="..."
-                                width="700" height="400">
-                        </div>
+        <div class="card mb-3 border-0"
+            style="max-width: 100%; background: rgba(253, 245, 170, 0.77); padding-bottom:40px;">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <div class="card-body" style="margin: 30px 120px 0px;">
+                        <h5 class="card-title" style="font-size: 96px;">Món hot<svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor text-warning" class="bi bi-fire"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                            </svg></i></h5>
+                        <p class="card-text" style="font-size: 34px;">1. Đùi gà sốt me</p>
+                        <p class="card-text" style="font-size: 34px;">2. Rau trộn</p>
+                        <p class="card-text" style="font-size: 34px;">3. Bánh mâm xôi</p>
+                        <p class="card-text" style="font-size: 34px;">4. Trứng luộc kiểu pháp</p>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+                <div class="col-md-6 float-left" style="max-width: 700px;">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../../../../assets/image/hotfood1.webp" class="d-block w-100" alt="..."
+                                    width="700" height="400">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../../../assets/image/Sfood1.jpg" class="d-block w-100" alt="..."
+                                    width="700" height="400">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../../../assets/image/hotfood1.webp" class="d-block w-100" alt="..."
+                                    width="700" height="400">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../../../assets/image/AboutUsPhoto.png" class="d-block w-100" alt="..."
+                                    width="700" height="400">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
