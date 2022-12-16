@@ -6,7 +6,7 @@
         }
         
         public function findById($id){
-            return $this->find(self::TABLE,$id,'product_id');
+            return $this->find(self::TABLE,$id,'id');
         }
 
         public function store($data){
@@ -14,7 +14,7 @@
         }
 
         public function updateData($id,$data){
-            $this->update(self::TABLE,$id,$data,'product_id');
+            $this->update(self::TABLE,$id,$data,'id');
         }
 
         public function getProductByCategoryId($categoryId){
