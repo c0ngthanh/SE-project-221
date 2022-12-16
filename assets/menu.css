@@ -26,79 +26,41 @@ html{
 .item {
     position: relative;
     box-sizing: border-box;
-    width: 336px;
-    height: 130px;
     margin: 20px;
-
+    height: 320px;
     background: #FFFFFF;
     border: 2px solid #838DE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
-
-.box .item .img-food {
-    width: 170px;
-    height: 125px;
-    padding: 10px;
+.item .box >a{
+    width: 250px;
+    margin-top:15px
 }
-
-.item .name-food {
+.item >a img{
+    width: 250px;
+    object-fit: contain;
+    margin-top: 20px;
+}
+.item .name-food{
+    margin-top: 75px;
+    margin-right: 10px;
+    display: flex;
+}
+.item .rating,.item .dis-price-food,.item .new-dis-price-food{
+    margin-top:25px;
+}
+.item button{
     position: absolute;
-    left: 174px;
-    top: 10px;
+    top: 250px;
+    padding: 10px 20px;
 }
-
-.item .rating{
-    position: absolute;
-    width: 162px;
-    height: 28px;
-    left: 174px;
-    top: 50px;
+.checked{
+    color:yellow;
 }
-.item .checked{
-    color: rgb(255, 201, 7)
+.item .dis-price-food{
+    text-decoration: line-through;
 }
-.item .fa-star{
-    padding: 0px 2px
-}
-.item .RateNum{
-    font-weight: bold;
-}
-
-.item .rating .in {
-    display: inline-block;
-}
-
-.item .dis-price-food {
-    text-decoration-line: line-through;
-    position: absolute;
-    left: 174px;
-    top: 70px;
-}
-
-.item .price-food {
-    position: absolute;
-    left: 174px;
-    top: 70px;
-}
-
-.item .new-dis-price-food {
-    color: red;
-    position: absolute;
-    left: 174px;
-    top: 93px;
-}
-
-.item .add-food {
-    box-sizing: border-box;
-    position: absolute;
-    left: 296px;
-    top: 85px;
-    background: #D9D9D9;
-    border: 1px solid #000000;
-    border-radius: 2px;
-}
-
 h5 {
     padding: 0px 7px 0px;
 }
