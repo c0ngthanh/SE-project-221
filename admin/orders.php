@@ -76,8 +76,8 @@ $offset = ($page - 1) * $record1page;
                     <a name="ID" href="detailOrder.php?ID=<?php echo $r['id']; ?>&type=orders" class="btn btn-dark"><i class="ti-info"></i></a>
                     <?php
                     if ($r['status'] == 'waiting') { ?>
-                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
-                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
+                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id'] ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
+                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id'] ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
                 </td>
             </tr>
         <?php

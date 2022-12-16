@@ -40,7 +40,7 @@ $Products = $count_products['count_products'];
             </div>
         </div>
     </div>
-    <h3>Thống kê đơn tháng 12</h3>
+    <h3>Thống kê đơn tháng <?php echo date('m', time())?></h3>
     <div id="analyze">
         <?php
         include('chart.php');
