@@ -10,25 +10,6 @@ html{
     color: #000;
 }
 
-#hotFood{
-height: 555px;
-background: #FDF5AA;
-}
-#hotFood .listFood{
-    width: 40%;
-    float:left;
-    margin:72px 0px 0px 126px;
-
-}
-#hotFood .listFood .listHotFood{
-    list-style-type:decimal;
-    line-height: 42px;
-}
-#hotFood .imgFood{
-    float:left;
-    width: 50%;
-    margin: 72px 0px 0px 20px;  
-}
 .container-fluid .title,#discount .title,#Rate .title{
     /* position: absolute; */
     text-align: center;
@@ -37,7 +18,9 @@ background: #FDF5AA;
 }
 
 .carousel {
-    margin: 0px 30px 0px;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);

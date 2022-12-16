@@ -42,6 +42,7 @@
 
             $sql = "insert into ${table}(${keys}) values(${values})";
             $this->_query($sql);
+            die($this->_query("SELECT LAST_INSERT_ID()"));
         }
 
         /*Cap nhat du lieu vao bang*/

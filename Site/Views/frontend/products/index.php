@@ -22,6 +22,10 @@
     <?php
     include_once './Components/Header.php';
     ?>
+    <?php
+        echo '<pre>';
+        print_r($products);
+    ?>
 </body>
 
 </html>
