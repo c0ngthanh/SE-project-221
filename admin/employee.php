@@ -78,7 +78,7 @@ $offset = ($page - 1) * $record1page;
                 <td><?php echo $r['username']; ?></td>
                 <td><?php echo $r['password']; ?></td>
                 <td>
-                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>" class="btn btn-primary">Sửa</a>
+                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>&type=employee" class="btn btn-primary">Sửa</a>
                     <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
@@ -88,7 +88,7 @@ $offset = ($page - 1) * $record1page;
     </tbody>
 </table>
 <ul class="pagination justify-content-center">
-    <li class="page-item <?= ($page <= 1) ? 'disabled' : ''; ?>"><a class="page-link" <?= ($page > 1) ? 'href=?page=' . $previous . '&sort=' . $sort_option . '&search=' . $_GET["search"] : ''; ?>>Previous</a></li>
+    <li class="page-item <?= ($page <= 1) ? 'disabled' : ''; ?>"><a class="page-link" <?= ($page > 1) ? 'href=?page=' . $previous . '&sort=' . $sort_option . '&search=' . $_GET["search"] . '&type=employee': ''; ?>>Previous</a></li>
 
     <li class="page-item active"><a class="page-link"><?= $page ?></a></li>
 
