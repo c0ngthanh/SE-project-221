@@ -31,25 +31,25 @@
             </div>
             <ul class="list-unstyled components">
                 <li class="<?= ($_GET['type']=='home') ? 'active' :''; ?>">
-                    <a href="#">
+                    <a href="index.php?type=home">
                         <i class="fas fa-briefcase"></i>
                         Home
                     </a>
                 </li>
                 <li class="<?= ($_GET['type']=='employee') ? 'active' :''; ?>">
-                    <a href="#">
+                    <a href="employee.php?sort=emp_id&search=&type=employee&page=1">
                         <i class="fas fa-briefcase"></i>
                         Employee
                     </a>
                 </li>
                 <li class="<?= ($_GET['type']=='orders') ? 'active' :''; ?>">
-                    <a href="#">
+                    <a href="orders.php?sort=id&search=&type=orders&page=1">
                         <i class="fas fa-image"></i>
                         Orders
                     </a>
                 </li>
                 <li class="<?= ($_GET['type']=='menu') ? 'active' :''; ?>">
-                    <a href="#">
+                    <a href="menu.php?sort=id&search=&type=menu&page=1">
                         <i class="fas fa-question"></i>
                         Menu
                     </a>
@@ -58,6 +58,12 @@
                     <a href="#">
                         <i class="fas fa-paper-plane"></i>
                         Custom
+                    </a>
+                </li>
+                <li class="<?= ($_GET['type']=='custom') ? 'active' :''; ?>">
+                    <a href="logout.php">
+                        <i class="ti-shift-left"></i>
+                        Log out
                     </a>
                 </li>
             </ul>
