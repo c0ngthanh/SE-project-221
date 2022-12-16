@@ -56,7 +56,7 @@ $offset = ($page - 1) * $record1page;
             $sort_option = $_GET['sort'];
             $str = $_GET['search'];
             $query = "SELECT * from `orders` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
-            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `employee` where $sort_option REGEXP '$str+') as a");
+            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `orders` where $sort_option REGEXP '$str+') as a");
         }
         $records = mysqli_fetch_array($result_count);
         $total_records = $records['total_records'];
@@ -76,8 +76,8 @@ $offset = ($page - 1) * $record1page;
                     <a name="ID" href="detailOrder.php?ID=<?php echo $r['id']; ?>&type=orders" class="btn btn-dark"><i class="ti-info"></i></a>
                     <?php
                     if ($r['status'] == 'waiting') { ?>
-                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
-                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
+                        <a name="ID" href="confirmOrder.php?ID=<?php echo $r['id'] ?>" onclick="return confirm('Xác nhận đơn hàng?')" class="btn btn-success"><i class="ti-check"></i></a>
+                        <a name="ID" href="cancelOrder.php?ID=<?php echo $r['id'] ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" class="btn btn-danger"><i class="ti-close"></i></a><?php } ?>
                 </td>
             </tr>
         <?php
