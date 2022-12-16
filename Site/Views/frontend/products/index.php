@@ -2,30 +2,308 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" type="text/css" href="../../../../assets/header.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/footer.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+
+  <link rel="stylesheet" type="text/css" href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="../assets/header.css">
+  <link rel="stylesheet" type="text/css" href="../assets/footer.css">
+  <link rel="stylesheet" type="text/css" href="../assets/menu.css">
 </head>
 
 <body>
-    <!--Begin NavBar-->
-    <?php
-    include_once './Components/Header.php';
-    ?>
-    <?php
-        echo '<pre>';
-        print_r($products);
-    ?>
+  <!--Begin NavBar-->
+  <nav class="navbar navbar-expand-lg bg-while">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant"></a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 border border-light bg-light" type="search" placeholder="Tìm kiếm.."
+          aria-label="Search">
+        <button class="btn border border-light " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      </form>
+      <div class="float-right collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="float-right navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="menu.html">Cơm</a></li>
+              <li><a class="dropdown-item" href="#">Đồ uống</a></li>
+              <li><a class="dropdown-item" href="#">Ăn vặt</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Về nhà hàng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lịch sử mua hàng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Giỏ hàng</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--End NavBar-->
+  <!--Mon hot-->
+  <div class="card border border-white" style="width: 100%; height: auto;">
+    <div class="card-body">
+      <h5 class="card-title content">Món chính</h5>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="box">
+            <a href="#">
+              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
+            </a>
+            <h4 class="name-food">Pizza Nấm</h4>
+            <div class="rating">
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <p class="RateNum in"> 5</p>
+            </div>
+            <h4 class="dis-price-food">250.000đ</h4>
+            <h4 class="new-dis-price-food">225.000đ</h4>
+            
+            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <a href="#">
+              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
+            </a>
+            <h4 class="name-food">Pizza Nấm</h4>
+            <div class="rating">
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <p class="RateNum in"> 5</p>
+            </div>
+            <h4 class="dis-price-food">250.000đ</h4>
+            <h4 class="new-dis-price-food">225.000đ</h4>
+            
+            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <a href="#">
+              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
+            </a>
+            <h4 class="name-food">Pizza Nấm</h4>
+            <div class="rating">
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <p class="RateNum in"> 5</p>
+            </div>
+            <h4 class="dis-price-food">250.000đ</h4>
+            <h4 class="new-dis-price-food">225.000đ</h4>
+            
+            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <a href="#">
+              <img class="imgFood" src="../assets/image/Pizza.png" alt="Pizza">
+            </a>
+            <h4 class="name-food">Pizza Nấm</h4>
+            <div class="rating">
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <div class="fa fa-star checked in"></div>
+              <p class="RateNum in"> 5</p>
+            </div>
+            <h4 class="dis-price-food">250.000đ</h4>
+            <h4 class="new-dis-price-food">225.000đ</h4>
+            
+            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Mon hot-->
+
+  <!-- Cơm
+  <div class="card border border-white" style="width: 100%; height: auto;">
+    <div class="card-body">
+      <h5 class="card-title content">Cơm</h5>
+      <div class="box">
+        <div class="item">
+          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+          <h4 class="name-food">Pizza Nấm</h4>
+          <div class="rating">
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <p class="RateNum in"> 5</p>
+          </div>
+          <h4 class="dis-price-food">250.000đ</h4>
+          <h4 class="new-dis-price-food">225.000đ</h4>
+          <button type="button" class="add-food">
+            <h5>+</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!--End cơm-->
+
+  <!--Ăn vặt-->
+  <!-- <div class="card border border-white" style="width: 100%; height: auto;">
+    <div class="card-body">
+      <h5 class="card-title content">Ăn vặt</h5>
+      <div class="box">
+        <div class="item">
+          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+          <h4 class="name-food">Pizza Nấm</h4>
+          <div class="rating">
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <p class="RateNum in"> 5</p>
+          </div>
+          <h4 class="dis-price-food">250.000đ</h4>
+          <h4 class="new-dis-price-food">225.000đ</h4>
+          <button type="button" class="add-food">
+            <h5>+</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!--End Ăn vặt-->
+
+  <!--Giải khát-->
+  <!-- <div class="card border border-white" style="width: 100%; height: auto;">
+    <div class="card-body">
+      <h5 class="card-title content">Giải khát</h5>
+      <div class="box">
+        <div class="item">
+          <a href="#"><img src="../assets/image/Pizza.png" alt="Pizza" class="img-food"></a>
+          <h4 class="name-food">Pizza Nấm</h4>
+          <div class="rating">
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <div class="fa fa-star checked in"></div>
+            <p class="RateNum in"> 5</p>
+          </div>
+          <h4 class="dis-price-food">250.000đ</h4>
+          <h4 class="new-dis-price-food">225.000đ</h4>
+          <button type="button" class="add-food">
+            <h5>+</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!--End giải khát-->
+
+  <div id="Footer">
+    <div class="logo-bottom">
+      <img class="logo" src="../assets/image/logo.png" alt="logo">
+    </div>
+    <div class="list">
+      <div class="ContactUs">
+        <h3 class="title">Theo dõi chúng tôi tại</h3>
+        <div class="instagram">
+          <img class="icon" src="../assets/image/InstaIcon.png" alt="Instagram icon">
+          <a href="" class="name">Instagram</a>
+        </div>
+        <div class="facebook">
+          <img class="icon" src="../assets/image/FacebookIcon.Png" alt="Facebook icon">
+          <p href="" class="name">Instagram</p>
+        </div>
+        <div class="twitter">
+          <img class="icon" src="../assets/image/TwitterIcon.png" alt="Twitter icon">
+          <p href="" class="name">Instagram</p>
+        </div>
+      </div>
+      <div class="Questions">
+        <h3 class="title">Các câu hỏi thường gặp</h3>
+        <a href="" class="link">Liên Hệ</a>
+        <a href="" class="link">Hỗ Trợ</a>
+        <a href="" class="link">Feed back</a>
+      </div>
+    </div>
+    <div class="last"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+    integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script text="text/javascript">
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

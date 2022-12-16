@@ -26,7 +26,7 @@
         }
         public function storeOrderDetail($input){
             $orderId= $this->create('orders_detail',[
-                'orders_id'=> $input['id'],
+                'orders_id'=> $input['orders_id'],
                 'product_id' => $input['product_id'],
                 'product_qt' => $input['product_qt'],
                 'price' => $input['price']

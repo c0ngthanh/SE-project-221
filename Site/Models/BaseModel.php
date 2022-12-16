@@ -42,7 +42,7 @@
 
             $sql = "insert into ${table}(${keys}) values(${values})";
             $this->_query($sql);
-            die($this->_query("SELECT LAST_INSERT_ID()"));
+            return $this->__query("SELECT LAST_INSERT_ID() as id");
         }
 
         /*Cap nhat du lieu vao bang*/
@@ -63,6 +63,10 @@
 
         private function _query($sql){
             return mysqli_query($this->connect,$sql);
+        }
+        private function __query($sql){
+            $result= mysqli_query($this->connect,$sql);
+            return mysqli_fetch_array($result);
         }
     }
 ?>
