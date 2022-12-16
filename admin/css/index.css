@@ -1,0 +1,24 @@
+/* #content .row{
+    margin-top: 10px;
+}
+#content{
+    display:flex;
+}
+.About{
+    width: 33.3333%;
+    margin-right: 100px;
+}
+#analyze{
+    width:60%;
+} */
+.About{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.About >div{
+    width: 30%;
+}
+#analyze{
+    height:400px;
+}
