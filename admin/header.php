@@ -48,7 +48,7 @@
                         Orders
                     </a>
                 </li>
-                <li class="<?= ($_GET['type']=='Menu') ? 'active' :''; ?>">
+                <li class="<?= ($_GET['type']=='menu') ? 'active' :''; ?>">
                     <a href="#">
                         <i class="fas fa-question"></i>
                         Menu

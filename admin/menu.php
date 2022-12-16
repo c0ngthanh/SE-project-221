@@ -18,17 +18,15 @@ $offset = ($page - 1) * $record1page;
         <!-- Nav pills -->
         <form class="form-inline" action="" method="GET">
             <select type="sort" class="form-control mb-2 mr-sm-2" id="sort" name="sort">
-                <option value="emp_id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_id") {
+                <option value="dish_id" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_id") {
                                             echo "selected";
                                         } ?>>ID</option>
-                <option value="emp_fname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_fname") {
+                <option value="price" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_fname") {
                                                 echo "selected";
-                                            } ?>>Họ</option>
-                <option value="emp_lname" <?php if (isset($_GET['sort']) && $_GET['sort'] == "emp_lname") {
-                                                echo "selected";
-                                            } ?>>Tên</option>
+                                            } ?>>Giá</option>
             </select>
             <input type="text" class="form-control mb-2 mr-sm-2" name="search">
+            <input type="hidden" name="type" value="menu">
             <button type="submit" class="btn btn-primary mb-2" name="page" value="<?= $page ?>">Sort</button>
         </form>
     </div>
@@ -41,26 +39,24 @@ $offset = ($page - 1) * $record1page;
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>ID Nhân viên</th>
-            <th>Họ</th>
-            <th>Tên</th>
-            <th>Số điện thoại</th>
-            <th>Email</th>
-            <th>Tên đăng nhập</th>
-            <th>Mật khẩu</th>
+            <th>ID Món</th>
+            <th>Tên món</th>
+            <th>Mô tả</th>
+            <th>Giá</th>
+            <th>Ảnh minh họa</th>
             <th>Hành động</th>
         </tr>
     </thead>
     <tbody>
         <?php
         $sort_option = $_GET['sort'];
-        $query = "SELECT * from `employee` order by $sort_option limit $offset,$record1page";
-        $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from `employee`");
+        $query = "SELECT * from `dishes` order by $sort_option limit $offset,$record1page";
+        $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from `dishes`");
         if (isset($_GET["search"]) && !empty($_GET["search"])) {
             $sort_option = $_GET['sort'];
             $str = $_GET['search'];
-            $query = "SELECT * from `employee` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
-            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `employee` where $sort_option REGEXP '$str+') as a");
+            $query = "SELECT * from `dishes` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
+            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `dishes` where $sort_option REGEXP '$str+') as a");
         }
         $records = mysqli_fetch_array($result_count);
         $total_records = $records['total_records'];
@@ -69,16 +65,14 @@ $offset = ($page - 1) * $record1page;
         while ($r = mysqli_fetch_assoc($result)) {
         ?>
             <tr>
-                <td><?php echo $r['emp_id']; ?></td>
-                <td><?php echo $r['emp_fname']; ?></td>
-                <td><?php echo $r['emp_lname']; ?></td>
-                <td><?php echo $r['emp_phone']; ?></td>
-                <td><?php echo $r['mail']; ?></td>
-                <td><?php echo $r['username']; ?></td>
-                <td><?php echo $r['password']; ?></td>
+                <td><?php echo $r['dish_id']; ?></td>
+                <td><?php echo $r['dish_name']; ?></td>
+                <td><?php echo $r['description']; ?></td>
+                <td><?php echo $r['price']; ?></td>
+                <td><img src="img/<?=$r['img']?>"></td>
                 <td>
-                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>" class="btn btn-primary">Sửa</a>
-                    <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger">Xóa</a>
+                    <a name="ID" href="editEmp.php?ID=<?php echo $r['dish_id']; ?>" class="btn btn-primary">Sửa</a>
+                    <a name="ID" href="deleteEmp.php?ID=<?php echo $r['dish_id']; ?>" onclick="return confirm('Bạn có muốn xóa Món này?')" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
         <?php

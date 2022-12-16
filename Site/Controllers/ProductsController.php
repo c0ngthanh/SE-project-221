@@ -7,9 +7,9 @@ class ProductsController extends BaseController {
         $this->ProductsModel = new ProductsModel;
     }
     public function index(){
-        $select = ['product_id','product_name'];
+        $select = ['id','name'];
         $order = [
-            'column' => 'product_id',
+            'column' => 'id',
             'order' => 'desc'
         ];
         $limit =15;
