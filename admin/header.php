@@ -54,10 +54,10 @@
                         Menu
                     </a>
                 </li>
-                <li class="<?= ($_GET['type']=='custom') ? 'active' :''; ?>">
+                <li class="<?= ($_GET['type']=='customer') ? 'active' :''; ?>">
                     <a href="#">
                         <i class="fas fa-paper-plane"></i>
-                        Custom
+                        Customer
                     </a>
                 </li>
             </ul>
