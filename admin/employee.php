@@ -71,14 +71,14 @@ $offset = ($page - 1) * $record1page;
         ?>
             <tr>
                 <td><?php echo $r['emp_id']; ?></td>
-                <td><?php echo $r['emp_fname']; ?></td>
                 <td><?php echo $r['emp_lname']; ?></td>
+                <td><?php echo $r['emp_fname']; ?></td>
                 <td><?php echo $r['emp_phone']; ?></td>
                 <td><?php echo $r['mail']; ?></td>
                 <td><?php echo $r['username']; ?></td>
                 <td><?php echo $r['password']; ?></td>
                 <td>
-                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>&type=employee" class="btn btn-success"><i class="ti-pencil"></i></a>
+                    <a name="ID" href="editEmp.php?ID=<?php echo $r['emp_id']; ?>&type=employee" class="btn btn-primary"><i class="ti-pencil"></i></a>
                     <a name="ID" href="deleteEmp.php?ID=<?php echo $r['emp_id']; ?>" onclick="return confirm('Bạn có muốn xóa nhân viên này?')" class="btn btn-danger"><i class="ti-close"></i></a>
                 </td>
             </tr>
@@ -104,7 +104,6 @@ $offset = ($page - 1) * $record1page;
             <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title">Thêm nhân viên mới</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
             <div class="modal-body">
@@ -136,8 +135,11 @@ $offset = ($page - 1) * $record1page;
                         <input class="form-control" id="password" name="password">
                     </div>
             </div>
-            <button value="1" name="type" id="type" onclick="return confirm('Xác nhận thêm?')" type="submit" class="btn btn-primary">Thêm</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            <div class="container">
+                <button value="1" name="type" id="type" onclick="return confirm('Xác nhận thêm?')" type="submit" class="btn btn-primary">Thêm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+            </div>
+            
             </form>
         </div>
     </div>
