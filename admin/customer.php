@@ -52,7 +52,7 @@ $offset = ($page - 1) * $record1page;
             $sort_option = $_GET['sort'];
             $str = $_GET['search'];
             $query = "SELECT * from `customer` where $sort_option REGEXP '$str+' order by $sort_option limit $offset,$record1page";
-            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `employee` where $sort_option REGEXP '$str+') as a");
+            $result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records from (SELECT * from `customer` where $sort_option REGEXP '$str+') as a");
         }
         $records = mysqli_fetch_array($result_count);
         $total_records = $records['total_records'];
