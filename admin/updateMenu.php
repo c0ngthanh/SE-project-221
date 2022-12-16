@@ -5,6 +5,9 @@
     $price = $_POST['price'];
     $product_category = $_POST['product_category'];
     require_once 'connection.php';
+	$query = "SELECT id from category where name='$product_category'";
+	$r=mysqli_fetch_assoc(mysqli_query($conn, $query));
+	$product_category=$r['id'];
     $query1 = "UPDATE `products` SET `name` = '$name',`description`='$description', `price` = '$price', `product_category`='$product_category' where `id`='$id'";
     mysqli_query($conn,$query1);;
 ?>
