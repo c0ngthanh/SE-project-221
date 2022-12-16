@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 04:45 PM
+-- Generation Time: Dec 16, 2022 at 05:36 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,8 +46,7 @@ INSERT INTO `addresslist` (`id`, `name`, `ward`, `district`, `diachi_phone`) VAL
 (4, 'KTX Dai hoc Ngan hang', 'Linh chieu', 'Thu Duc', '0726183978'),
 (5, '15 D5', '25', 'Binh Thanh', '0781658690'),
 (6, '59C Nguyen Dinh Chieu', '6', '3', '0870482906'),
-(7, '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565'),
-(8, 'KTX khu B DHQG', 'Linh Trung', 'Thu Duc', '0602949213');
+(7, '145 Dien Bien Phu', '15', 'Binh Thanh', '0904890565');
 
 -- --------------------------------------------------------
 
@@ -115,7 +114,7 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`, `username`, `password`) VALUES
-(1, 'cong', 'thanh', '0312167832', 'cong@gmail.com', 'congcong', '1'),
+(1, 'cong', 'cong', '0312167832', 'cong@gmail.com', 'congcong', '1'),
 (2, 'cong', 'hung', '0312871832', 'chung@gmail.com', 'hung', '1'),
 (3, 'cong', 'thanh', '0312162341', 'thanh@gmail.com', 'thanhcong', '1'),
 (4, 'duy', 'cong', '0312167432', 'duy@gmail.com', 'congduy', '1'),
@@ -134,9 +133,14 @@ INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`,
 
 CREATE TABLE `orders` (
   `id` int(10) UNSIGNED NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
   `order_phone` varchar(10) NOT NULL,
-  `price` float UNSIGNED NOT NULL,
-  `diachi_id` int(10) UNSIGNED NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `diachi` varchar(255) NOT NULL,
+  `district` varchar(50) NOT NULL,
+  `ward` varchar(50) NOT NULL,
+  `price` float UNSIGNED DEFAULT NULL,
   `time` datetime NOT NULL DEFAULT curtime(),
   `payment` enum('cash','momo','credit_card') NOT NULL DEFAULT 'cash',
   `status` enum('waiting','paid','canceled','not_paid') NOT NULL DEFAULT 'waiting'
@@ -146,10 +150,8 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `order_phone`, `price`, `diachi_id`, `time`, `payment`, `status`) VALUES
-(2, '0219883236', 60000, 1, '2022-12-16 22:36:40', 'cash', 'paid'),
-(3, '0672182711', 125000, 3, '2022-12-16 22:36:40', 'momo', 'waiting'),
-(4, '0726183978', 270000, 1, '2022-12-16 22:36:40', 'cash', 'paid');
+INSERT INTO `orders` (`id`, `fname`, `lname`, `order_phone`, `mail`, `diachi`, `district`, `ward`, `price`, `time`, `payment`, `status`) VALUES
+(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', NULL, '2022-12-16 23:25:09', 'cash', 'waiting');
 
 -- --------------------------------------------------------
 
@@ -163,17 +165,6 @@ CREATE TABLE `orders_detail` (
   `product_qt` int(11) NOT NULL,
   `price` double UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `orders_detail`
---
-
-INSERT INTO `orders_detail` (`orders_id`, `product_id`, `product_qt`, `price`) VALUES
-(2, 1, 4, 60000),
-(3, 1, 5, 75000),
-(4, 2, 2, 70000),
-(3, 4, 1, 50000),
-(4, 5, 2, 200000);
 
 -- --------------------------------------------------------
 
@@ -197,9 +188,7 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `imgURL`, `product_category`) VALUES
 (1, 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
 (2, 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png', 1),
-(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1),
-(4, 'Cơm gà Hong Kong', 'Cơm gà quay sốt Hong Kong', 50000, 'Com-ga-HongKong.png', 1),
-(5, 'Cơm trộn', 'Cơm trộn kimbap, rong biển', 100000, 'Com-tron.png', 2);
+(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1);
 
 --
 -- Indexes for dumped tables
@@ -234,14 +223,14 @@ ALTER TABLE `employee`
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `order_fk_1` (`diachi_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  ADD PRIMARY KEY (`product_id`,`orders_id`) USING BTREE,
+  ADD PRIMARY KEY (`product_id`) USING BTREE,
+  ADD KEY `order_fk_2` (`product_id`),
   ADD KEY `orders_fk_3` (`orders_id`);
 
 --
@@ -259,7 +248,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `addresslist`
 --
 ALTER TABLE `addresslist`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -277,13 +266,13 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -294,12 +283,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `addresslist`
   ADD CONSTRAINT `address_fk_1` FOREIGN KEY (`diachi_phone`) REFERENCES `customer` (`phone`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `order_fk_1` FOREIGN KEY (`diachi_id`) REFERENCES `addresslist` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `orders_detail`
