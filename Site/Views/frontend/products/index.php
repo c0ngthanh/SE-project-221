@@ -50,7 +50,9 @@
             ?>
             <div class="item">
                 <div class="card" style="width: auto;">
-                    <img class="card-img-top" src="../../../../assets/image/<?=$data['imgURL']?>" alt="Card image cap">
+                <a href="?controller=products&action=show&id=<?=$data['id']?>">
+                <img class="card-img-top" src="../../../../assets/image/<?=$data['imgURL']?>" alt="Card image cap">
+                </a>
                     <div class="card-body">
                         <h5 class="card-title" style="font-size: 30px;"><?= $data['name']?></h5>
                         <!-- <p class="card-text" style="text-decoration-line: line-through; font-size: 25px;">45.000đ</p> -->
@@ -97,10 +99,6 @@
       }
     })
   </script>
-  <?php
-    echo '<pre>';
-    print_r($products);
-  ?>
 </body>
 
 </html>

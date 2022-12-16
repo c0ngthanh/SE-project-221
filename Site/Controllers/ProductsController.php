@@ -22,7 +22,7 @@ class ProductsController extends BaseController {
     public function show(){
         $products_id = $_GET['id'] ?? 'null';
         $product_id = $this->ProductsModel->findById($products_id);
-        return $this->view('frontend.products.show',[
+        return $this->view('frontend.products._detail',[
             'product_id' => $product_id, //
         ]);
     }
