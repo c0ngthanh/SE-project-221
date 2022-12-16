@@ -1,3 +1,3 @@
 <?php
-    $conn=mysqli_connect("localhost","root","","SE-project-221");
+    $conn=mysqli_connect("localhost","root","","project_221_cnpm");
 ?>
