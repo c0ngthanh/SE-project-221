@@ -25,7 +25,7 @@
                     <a class="nav-link" href="?controller=products&action=index">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Về nhà hàng</a>
+                    <a class="nav-link" href="?controller=aboutus&action=index">Về nhà hàng</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Lịch sử mua hàng</a>

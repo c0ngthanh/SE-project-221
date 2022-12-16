@@ -8,26 +8,14 @@
     <link rel="stylesheet" type="text/css" href="../assets/AboutUs.css">
     <link rel="stylesheet" type="text/css" href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/header.css">
 </head>
 <body>
     <!--Begin NavBar-->
-    <div id="navBar">
-        <img class="logoNav" src="../assets/image/logo.png" alt="Logo restaurant" >
-        <div class="search-box">
-        <i class = "ti-search"></i>
-        <input class="location" type="text" placeholder="Nhập vị trí của bạn">
-        </div>
-        <li>
-            <ul id="subNav">
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="AboutUs.html">Về nhà hàng</a></li>
-              <li><a href="History.html">Lịch sử mua hàng</a></li>
-              <li><a href="cart.html">Giỏ hàng</a></li>
-            </ul>
-          </li>
-      </div>
+    <?php
+        include_once '../Site/Components/Header.php';
+    ?>
     <!--End NavBar-->
     <!--Begin AboutUs-->
     <div id="AboutUs">

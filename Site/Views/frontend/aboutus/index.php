@@ -11,6 +11,7 @@
         href="../assets/font_icon/themify-icons-font/themify-icons/themify-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/header.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
     <div id="AboutUs">
         <div class="AboutUsContent">
             <div class="title">XIANG RES <br> Hân hạnh phục vụ</div>
-            <a href="menu.html" class="click">Đặt món ngay</a>
+            <a href="?controller=products" class="click">Đặt món ngay</a>
         </div>
     </div>
     <!--End AboutUs-->
