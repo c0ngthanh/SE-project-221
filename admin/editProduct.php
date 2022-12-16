@@ -26,7 +26,16 @@ $row = mysqli_fetch_assoc($result);
 
         <div class="form-group">
             <label for="product_category">Loại món ăn</label>
-            <input class="form-control" id="product_category" name="product_category" value="<?php echo $row['product_category']; ?>">
+            <select name="product_category" id="product_category" class="form-control">
+                <?php
+                $type = mysqli_query($conn, "SELECT * from category");
+                while ($loaidoan = mysqli_fetch_assoc($type)) {
+                ?>
+                    <option value="<?= $loaidoan['name'] ?>"><?= $loaidoan['name'] ?></option>
+                <?php
+                }
+                ?>
+            </select>
         </div>
         <div class="form-group">
             <label for="latitude">Chọn ảnh</label>
