@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 03:11 AM
+-- Generation Time: Dec 16, 2022 at 05:36 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -64,8 +64,10 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Rau'),
-(2, 'Nước uống');
+(1, 'Đồ ăn vặt'),
+(2, 'Nước uống'),
+(3, 'Món chính'),
+(4, 'Khai vị');
 
 -- --------------------------------------------------------
 
@@ -123,7 +125,8 @@ INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`,
 (7, 'cong', 'chua', '0312162342', 'congchua@gmail.com', 'congchua', '1'),
 (8, 'quan', 'cong', '0134467832', 'quan@gmail.com', 'congng', '1'),
 (9, 'tuong', 'cong', '0312734532', 'coong@gmail.com', 'coong', '1'),
-(10, 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1');
+(10, 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1'),
+(11, 'Trương', 'Thành', '0987321678', 'otaku2k22@gmail.com', 'thanhpro', '1');
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `fname`, `lname`, `order_phone`, `mail`, `diachi`, `district`, `ward`, `price`, `time`, `payment`, `status`) VALUES
-(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', 190000, '2022-12-16 23:25:09', 'cash', 'paid');
+(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', NULL, '2022-12-16 23:25:09', 'cash', 'waiting');
 
 -- --------------------------------------------------------
 
@@ -165,14 +168,6 @@ CREATE TABLE `orders_detail` (
   `product_qt` int(11) NOT NULL,
   `price` double UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `orders_detail`
---
-
-INSERT INTO `orders_detail` (`orders_id`, `product_id`, `product_qt`, `price`) VALUES
-(18, 1, 1, 15000),
-(18, 2, 5, 175000);
 
 -- --------------------------------------------------------
 
@@ -194,12 +189,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `imgURL`, `product_category`) VALUES
-(1, 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
+(1, 'Banh gạo', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
 (2, 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png', 1),
-(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1),
-(7, 'Trà sữa', 'Trà sữa trân châu', 20000, 'Tra-sua-chocolate.png', 2),
-(8, 'tra dao', 'tra dao cam sa', 35000, 'Tra-dao.png', 2),
-(9, 'tra sua matcha', 'matcha', 25000, 'Tra-sua-matcha.png', 2);
+(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1);
 
 --
 -- Indexes for dumped tables
@@ -240,7 +232,7 @@ ALTER TABLE `orders`
 -- Indexes for table `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  ADD PRIMARY KEY (`product_id`) USING BTREE,
+  ADD PRIMARY KEY (`orders_id`,`product_id`),
   ADD KEY `order_fk_2` (`product_id`),
   ADD KEY `orders_fk_3` (`orders_id`);
 
@@ -265,25 +257,25 @@ ALTER TABLE `addresslist`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
