@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 05:36 PM
+-- Generation Time: Dec 17, 2022 at 05:26 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,8 +64,10 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Rau'),
-(2, 'Nước uống');
+(1, 'Đồ ăn vặt'),
+(2, 'Nước uống'),
+(3, 'Món chính'),
+(4, 'Khai vị');
 
 -- --------------------------------------------------------
 
@@ -123,7 +125,8 @@ INSERT INTO `employee` (`emp_id`, `emp_lname`, `emp_fname`, `emp_phone`, `mail`,
 (7, 'cong', 'chua', '0312162342', 'congchua@gmail.com', 'congchua', '1'),
 (8, 'quan', 'cong', '0134467832', 'quan@gmail.com', 'congng', '1'),
 (9, 'tuong', 'cong', '0312734532', 'coong@gmail.com', 'coong', '1'),
-(10, 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1');
+(10, 'cong', 'tuan', '0312534832', 'congo@gmail.com', 'congo', '1'),
+(11, 'Trương', 'Thành', '0987321678', 'otaku2k22@gmail.com', 'thanhpro', '1');
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,19 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `fname`, `lname`, `order_phone`, `mail`, `diachi`, `district`, `ward`, `price`, `time`, `payment`, `status`) VALUES
-(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', NULL, '2022-12-16 23:25:09', 'cash', 'waiting');
+(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', 190000, '2022-12-16 23:25:09', 'cash', 'paid'),
+(19, 'Cong', 'Thanh', '0989789652', 'thanh@gmail.com', '231 ', 'Quận Tân Bình', 'Phường 8', 250000, '2022-12-17 09:24:08', 'cash', 'paid'),
+(20, 'Cong', 'Thanh', '0987678321', 'thanh@gmail.com', '678', 'Quận 1', 'Phường 9', 240000, '2022-12-01 23:25:09', 'cash', 'paid'),
+(21, 'Cong', 'Thanh', '0987678321', 'thanh@gmail.com', '678', 'Quận 1', 'Phường 9', 180000, '2022-12-01 23:25:09', 'cash', 'paid'),
+(22, 'Cong', 'Thanh', '0987678321', 'thanh@gmail.com', '678', 'Quận 1', 'Phường 9', 165000, '2022-12-02 06:25:09', 'cash', 'paid'),
+(23, 'Cong', 'Thanh', '0987678321', 'thanh@gmail.com', '678', 'Quận 1', 'Phường 9', 80000, '2022-12-03 10:00:00', 'momo', 'paid'),
+(24, 'Cong', 'Thanh', '0987678321', 'thanh@gmail.com', '678', 'Quận 1', 'Phường 9', 100000, '2022-12-18 10:00:00', 'momo', 'paid'),
+(25, 'Quoc', 'Duy', '0387678902', 'duy@gmail.com', '908', 'Quận Bình Thạnh', 'Phường 10', 105000, '2022-12-03 17:00:00', 'momo', 'paid'),
+(26, 'Quoc', 'Duy', '0387678902', 'duy@gmail.com', '908', 'Quận Bình Thạnh', 'Phường 10', 180000, '2022-12-04 17:00:00', 'cash', 'canceled'),
+(27, 'Quoc', 'Duy', '0387678902', 'duy@gmail.com', '908', 'Quận Bình Thạnh', 'Phường 10', 160000, '2022-12-05 17:00:00', 'momo', 'waiting'),
+(28, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 120000, '2022-12-01 17:00:00', 'momo', 'waiting'),
+(29, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 80000, '2022-12-01 19:00:00', 'cash', 'paid'),
+(30, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 315000, '2022-12-01 20:00:00', 'momo', 'paid');
 
 -- --------------------------------------------------------
 
@@ -165,6 +180,40 @@ CREATE TABLE `orders_detail` (
   `product_qt` int(11) NOT NULL,
   `price` double UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `orders_detail`
+--
+
+INSERT INTO `orders_detail` (`orders_id`, `product_id`, `product_qt`, `price`) VALUES
+(18, 1, 1, 15000),
+(18, 2, 5, 175000),
+(19, 3, 5, 250000),
+(20, 1, 3, 45000),
+(20, 2, 1, 35000),
+(20, 7, 3, 60000),
+(20, 12, 1, 100000),
+(21, 1, 3, 45000),
+(21, 7, 3, 60000),
+(21, 9, 3, 75000),
+(22, 7, 3, 60000),
+(22, 11, 3, 105000),
+(23, 1, 3, 45000),
+(23, 2, 1, 35000),
+(24, 12, 1, 100000),
+(25, 1, 3, 45000),
+(25, 7, 3, 60000),
+(26, 9, 3, 75000),
+(26, 11, 3, 105000),
+(27, 7, 3, 60000),
+(27, 12, 1, 100000),
+(28, 1, 3, 45000),
+(28, 9, 3, 75000),
+(29, 1, 3, 45000),
+(29, 2, 1, 35000),
+(30, 7, 3, 60000),
+(30, 11, 3, 105000),
+(30, 15, 3, 150000);
 
 -- --------------------------------------------------------
 
@@ -186,9 +235,20 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `imgURL`, `product_category`) VALUES
-(1, 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
+(1, 'Banh gạo', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
 (2, 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png', 1),
-(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1);
+(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 3),
+(7, 'Trà sữa', 'Trà sữa trân châu', 20000, 'Tra-sua-chocolate.png', 2),
+(8, 'tra dao', 'tra dao cam sa', 35000, 'Tra-dao.png', 2),
+(9, 'tra sua matcha', 'matcha', 25000, 'Tra-sua-matcha.png', 2),
+(11, 'Salad', 'Salad khai vị nhẹ nhàng', 35000, 'Rau-tron.png', 4),
+(12, 'Kim bap chiên', 'Kim bap hàn quốc chiên', 100000, 'Kimbap-chien.png', 1),
+(13, 'Pizza nấm', 'Pizza nấm đông cô', 150000, 'Pizza.png', 3),
+(14, 'Cơm gà Hong Kong', 'Cơm gà quay sốt Hong Kong', 50000, 'Com-ga-HongKong.png', 3),
+(15, 'Cơm trộn', 'Cơm trộn hàn quốc', 50000, 'Com-tron.png', 4),
+(16, 'Salad cà chua', 'Salad cà chua +mayonase', 13000, 'salad ca chua.png', 4),
+(17, 'Trứng luộc', 'Trứng luộc 2 quả', 10000, 'trung luoc.png', 4),
+(18, 'bánh kép', 'bánh kép và shiro', 30000, 'banh kep.png', 1);
 
 --
 -- Indexes for dumped tables
@@ -229,7 +289,7 @@ ALTER TABLE `orders`
 -- Indexes for table `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  ADD PRIMARY KEY (`product_id`) USING BTREE,
+  ADD PRIMARY KEY (`orders_id`,`product_id`),
   ADD KEY `order_fk_2` (`product_id`),
   ADD KEY `orders_fk_3` (`orders_id`);
 
@@ -254,25 +314,25 @@ ALTER TABLE `addresslist`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `emp_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
@@ -282,20 +342,20 @@ ALTER TABLE `products`
 -- Constraints for table `addresslist`
 --
 ALTER TABLE `addresslist`
-  ADD CONSTRAINT `address_fk_1` FOREIGN KEY (`diachi_phone`) REFERENCES `customer` (`phone`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `address_fk_1` FOREIGN KEY (`diachi_phone`) REFERENCES `customer` (`phone`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  ADD CONSTRAINT `order_fk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `orders_fk_3` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `order_fk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `orders_fk_3` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_fk_01` FOREIGN KEY (`product_category`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `products_fk_01` FOREIGN KEY (`product_category`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
