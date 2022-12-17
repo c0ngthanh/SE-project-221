@@ -71,6 +71,45 @@
             <?php }?>
         </div>
   </div>
+  <!-- <div class="card border border-white" style="width: 100%; height: auto;">
+    <div class="card-body">
+      <h5 class="card-title content">Nước uống</h5>
+    </div>
+    <div class="owl-carousel owl-theme">
+            <?php 
+                $data1 = [];
+                foreach ($products as $products){
+                    if($products['product_category']==2)
+                    {
+                        array_push($data1,$products);
+                    }
+                    else continue;
+                }
+                foreach($data1 as $data1){
+            ?>
+            <div class="item">
+                <div class="card" style="width: auto;">
+                <a href="?controller=products&action=show&id=<?=$data1['id']?>">
+                <img class="card-img-top" src="../../../../assets/image/<?=$data1['imgURL']?>" alt="Card image cap">
+                </a>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 30px;"><?= $data1['name']?></h5>
+                        <!-- <p class="card-text" style="text-decoration-line: line-through; font-size: 25px;">45.000đ</p> -->
+                        <p class="card-text" style="font-size: 30px;"><?= $data1['price'] ?></p>
+                        <div class="text-center">
+                            <a href="?controller=cart&action=store&id=<?= $data1['id'] ?>" class="btn btn-primary button-cart text-dark">Thêm vào giỏ hàng <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+        </div>
+  </div> -->
   <!--End Mon hot-->
   <?php
         include_once './Components/Footer.php';

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 05:36 PM
+-- Generation Time: Dec 17, 2022 at 03:11 AM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -151,7 +151,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `fname`, `lname`, `order_phone`, `mail`, `diachi`, `district`, `ward`, `price`, `time`, `payment`, `status`) VALUES
-(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', NULL, '2022-12-16 23:25:09', 'cash', 'waiting');
+(18, 'Nguyễn', 'Duy', '0775853703', 'duy.nguyen06051998@hcmut.edu', '3123', 'Quận Bình Tân', 'Phường 9', 190000, '2022-12-16 23:25:09', 'cash', 'paid');
 
 -- --------------------------------------------------------
 
@@ -165,6 +165,14 @@ CREATE TABLE `orders_detail` (
   `product_qt` int(11) NOT NULL,
   `price` double UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `orders_detail`
+--
+
+INSERT INTO `orders_detail` (`orders_id`, `product_id`, `product_qt`, `price`) VALUES
+(18, 1, 1, 15000),
+(18, 2, 5, 175000);
 
 -- --------------------------------------------------------
 
@@ -188,7 +196,10 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `imgURL`, `product_category`) VALUES
 (1, 'Banh gạo cay', 'bánh gạo phô mai', 15000, 'Banh-gao-cay.png', 1),
 (2, 'Bánh mâm xôi', 'Bánh được làm từ quả mâm xôi', 35000, 'Banh-mam-xoi.png', 1),
-(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1);
+(3, 'Bò lúc lắc', 'Bò lúc lắc miền nam', 50000, 'Bo-luc-lac.png', 1),
+(7, 'Trà sữa', 'Trà sữa trân châu', 20000, 'Tra-sua-chocolate.png', 2),
+(8, 'tra dao', 'tra dao cam sa', 35000, 'Tra-dao.png', 2),
+(9, 'tra sua matcha', 'matcha', 25000, 'Tra-sua-matcha.png', 2);
 
 --
 -- Indexes for dumped tables
@@ -272,7 +283,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
@@ -282,20 +293,20 @@ ALTER TABLE `products`
 -- Constraints for table `addresslist`
 --
 ALTER TABLE `addresslist`
-  ADD CONSTRAINT `address_fk_1` FOREIGN KEY (`diachi_phone`) REFERENCES `customer` (`phone`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `address_fk_1` FOREIGN KEY (`diachi_phone`) REFERENCES `customer` (`phone`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  ADD CONSTRAINT `order_fk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `orders_fk_3` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `order_fk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `orders_fk_3` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_fk_01` FOREIGN KEY (`product_category`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `products_fk_01` FOREIGN KEY (`product_category`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
