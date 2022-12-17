@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 05:26 PM
+-- Generation Time: Dec 17, 2022 at 05:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -166,7 +166,67 @@ INSERT INTO `orders` (`id`, `fname`, `lname`, `order_phone`, `mail`, `diachi`, `
 (27, 'Quoc', 'Duy', '0387678902', 'duy@gmail.com', '908', 'Quận Bình Thạnh', 'Phường 10', 160000, '2022-12-05 17:00:00', 'momo', 'waiting'),
 (28, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 120000, '2022-12-01 17:00:00', 'momo', 'waiting'),
 (29, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 80000, '2022-12-01 19:00:00', 'cash', 'paid'),
-(30, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 315000, '2022-12-01 20:00:00', 'momo', 'paid');
+(30, 'Khanh', 'Hung', '0809789654', 'Hung@gmail.com', '1231', 'Quận 4', 'Phường 1', 315000, '2022-12-01 20:00:00', 'momo', 'paid'),
+(31, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-16 23:25:09', 'cash', 'paid'),
+(32, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-01 23:25:09', 'cash', 'paid'),
+(33, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-02 23:25:09', 'cash', 'paid'),
+(34, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-03 23:25:09', 'cash', 'paid'),
+(35, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-04 23:25:09', 'cash', 'paid'),
+(36, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-05 23:25:09', 'cash', 'paid'),
+(37, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-06 23:25:09', 'cash', 'paid'),
+(38, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-07 23:25:09', 'cash', 'paid'),
+(39, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-08 23:25:09', 'cash', 'paid'),
+(40, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(41, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-10 23:25:09', 'cash', 'paid'),
+(42, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(43, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-12 23:25:09', 'cash', 'paid'),
+(44, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-13 23:25:09', 'cash', 'paid'),
+(45, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-14 23:25:09', 'cash', 'paid'),
+(46, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-16 23:25:09', 'cash', 'paid'),
+(47, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-01 23:25:09', 'cash', 'paid'),
+(48, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-02 23:25:09', 'cash', 'paid'),
+(49, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-01 23:25:09', 'cash', 'paid'),
+(50, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-04 23:25:09', 'cash', 'paid'),
+(51, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-01 23:25:09', 'cash', 'paid'),
+(52, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-06 23:25:09', 'cash', 'paid'),
+(53, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-07 23:25:09', 'cash', 'paid'),
+(54, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-19 23:25:09', 'cash', 'paid'),
+(55, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(56, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-20 23:25:09', 'cash', 'paid'),
+(57, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(58, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-25 23:25:09', 'cash', 'paid'),
+(59, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-13 23:25:09', 'cash', 'paid'),
+(60, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-27 23:25:09', 'cash', 'paid'),
+(61, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-16 23:25:09', 'cash', 'paid'),
+(62, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-12 23:25:09', 'cash', 'paid'),
+(63, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-23 23:25:09', 'cash', 'paid'),
+(64, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(65, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-14 23:25:09', 'cash', 'paid'),
+(66, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-08 23:25:09', 'cash', 'paid'),
+(67, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-06 23:25:09', 'cash', 'paid'),
+(68, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-07 23:25:09', 'cash', 'paid'),
+(69, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(70, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(71, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-20 23:25:09', 'cash', 'paid'),
+(72, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(73, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-19 23:25:09', 'cash', 'paid'),
+(74, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-13 23:25:09', 'cash', 'paid'),
+(75, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-30 23:25:09', 'cash', 'paid'),
+(76, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-16 23:25:09', 'cash', 'paid'),
+(77, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-12 23:25:09', 'cash', 'paid'),
+(78, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-23 23:25:09', 'cash', 'paid'),
+(79, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(80, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-14 23:25:09', 'cash', 'paid'),
+(81, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-08 23:25:09', 'cash', 'paid'),
+(82, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-06 23:25:09', 'cash', 'paid'),
+(83, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-07 23:25:09', 'cash', 'paid'),
+(84, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(85, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-09 23:25:09', 'cash', 'paid'),
+(86, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-20 23:25:09', 'cash', 'paid'),
+(87, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-11 23:25:09', 'cash', 'paid'),
+(88, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-19 23:25:09', 'cash', 'paid'),
+(89, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-13 23:25:09', 'cash', 'paid'),
+(90, 'fake', 'db', 'fake', 'fake', 'fake@mail.com', 'Quận 1', 'Phường 25', 0, '2022-12-30 23:25:09', 'cash', 'paid');
 
 -- --------------------------------------------------------
 
@@ -326,7 +386,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `products`
