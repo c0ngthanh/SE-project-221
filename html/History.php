@@ -115,7 +115,7 @@ $offset = ($page - 1) * $record1page;
                             <td><?php echo $r['id']; ?></td>
                             <td><?php echo $r['order_phone']; ?></td>
                             <td><?php echo $r['price']; ?></td>
-                            <td><?php echo $r['diachi_id']; ?></td>
+                            <td><?php echo $r['diachi'] .", ".$r['ward'] .", ". $r['district']; ?><td>
                             <td><?php echo $r['time']; ?></td>
                             <td><?php echo $r['payment']; ?></td>
                             <td><?php echo $r['status']; ?></td>
