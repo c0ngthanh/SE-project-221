@@ -39,6 +39,7 @@
     <div class="owl-carousel owl-theme">
             <?php 
                 $data = [];
+                $data1 = [];
                 foreach ($products as $products){
                     if($products['product_category']==1)
                     {

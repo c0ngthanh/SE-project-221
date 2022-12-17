@@ -28,7 +28,7 @@
                     <a class="nav-link" href="?controller=aboutus&action=index">Về nhà hàng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lịch sử mua hàng</a>
+                    <a class="nav-link" href="../../html/History.php">Lịch sử mua hàng</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="?controller=cart&action=index">Giỏ hàng</a>
