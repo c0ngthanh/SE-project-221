@@ -132,7 +132,7 @@ include 'footer.php';
                             $type=mysqli_query($conn,"SELECT * from category");
                             while($loaidoan=mysqli_fetch_assoc($type)){
                                 ?>
-                                <option value="<?= $loaidoan['name'] ?>"><?= $loaidoan['name'] ?></option>
+                                <option value="<?= $loaidoan['id'] ?>"><?= $loaidoan['name'] ?></option>
                                 <?php
                             }
                         ?>
