@@ -41,7 +41,7 @@ class CartController extends BaseController {
                 echo "sản phẩm đã có trong giỏ hàng";
             }
         }  
-        header('Location:index.php?controller=cart');
+        header('Location:?controller=cart&action=index');
     }
     public function delete(){
         $productId = $_GET['id'] ?? 'null';
@@ -62,7 +62,7 @@ class CartController extends BaseController {
             }
             $vat = $tt/10;
         }
-        header('Location:index.php?controller=cart');
+        header('Location:?controller=cart&action=index');
     }
 }
 ?>
